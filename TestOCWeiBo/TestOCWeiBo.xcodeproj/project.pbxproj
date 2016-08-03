@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB2190913DD03E155805E2E7 /* libPods-TestOCWeiBo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9320DA87FF26610F54F6C4CE /* libPods-TestOCWeiBo.a */; };
 		F30A84661D519AD400B00B40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84651D519AD400B00B40 /* main.m */; };
 		F30A84691D519AD400B00B40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84681D519AD400B00B40 /* AppDelegate.m */; };
-		F30A846C1D519AD400B00B40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A846B1D519AD400B00B40 /* ViewController.m */; };
-		F30A846F1D519AD400B00B40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30A846D1D519AD400B00B40 /* Main.storyboard */; };
 		F30A84711D519AD400B00B40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F30A84701D519AD400B00B40 /* Assets.xcassets */; };
 		F30A84741D519AD400B00B40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F30A84721D519AD400B00B40 /* LaunchScreen.storyboard */; };
 		F30A847F1D519AD400B00B40 /* TestOCWeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A847E1D519AD400B00B40 /* TestOCWeiBoTests.m */; };
 		F30A848A1D519AD400B00B40 /* TestOCWeiBoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84891D519AD400B00B40 /* TestOCWeiBoUITests.m */; };
+		F30A84AF1D51B9C800B00B40 /* IWDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A849A1D51B9C800B00B40 /* IWDiscoverViewController.m */; };
+		F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84A01D51B9C800B00B40 /* IWMeViewController.m */; };
+		F30A84B11D51B9C800B00B40 /* IWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84A61D51B9C800B00B40 /* IWHomeViewController.m */; };
+		F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84AC1D51B9C800B00B40 /* IWMessageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +38,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		535FCB20937B5945E76A00C1 /* Pods-TestOCWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOCWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestOCWeiBo/Pods-TestOCWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
+		8135EEEB9740D02E5725D6C7 /* Pods-TestOCWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestOCWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestOCWeiBo/Pods-TestOCWeiBo.release.xcconfig"; sourceTree = "<group>"; };
+		9320DA87FF26610F54F6C4CE /* libPods-TestOCWeiBo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestOCWeiBo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30A84611D519AD400B00B40 /* TestOCWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestOCWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30A84651D519AD400B00B40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F30A84671D519AD400B00B40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F30A84681D519AD400B00B40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F30A846A1D519AD400B00B40 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F30A846B1D519AD400B00B40 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F30A846E1D519AD400B00B40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F30A84701D519AD400B00B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F30A84671D519AD400B00B40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		F30A84681D519AD400B00B40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		F30A84701D519AD400B00B40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		F30A84731D519AD400B00B40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F30A84751D519AD400B00B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F30A84751D519AD400B00B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		F30A847A1D519AD400B00B40 /* TestOCWeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestOCWeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30A847E1D519AD400B00B40 /* TestOCWeiBoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOCWeiBoTests.m; sourceTree = "<group>"; };
 		F30A84801D519AD400B00B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F30A84851D519AD400B00B40 /* TestOCWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestOCWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30A84891D519AD400B00B40 /* TestOCWeiBoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOCWeiBoUITests.m; sourceTree = "<group>"; };
 		F30A848B1D519AD400B00B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F30A84991D51B9C800B00B40 /* IWDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWDiscoverViewController.h; sourceTree = "<group>"; };
+		F30A849A1D51B9C800B00B40 /* IWDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWDiscoverViewController.m; sourceTree = "<group>"; };
+		F30A849F1D51B9C800B00B40 /* IWMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMeViewController.h; sourceTree = "<group>"; };
+		F30A84A01D51B9C800B00B40 /* IWMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMeViewController.m; sourceTree = "<group>"; };
+		F30A84A51D51B9C800B00B40 /* IWHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWHomeViewController.h; sourceTree = "<group>"; };
+		F30A84A61D51B9C800B00B40 /* IWHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWHomeViewController.m; sourceTree = "<group>"; };
+		F30A84AB1D51B9C800B00B40 /* IWMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMessageViewController.h; sourceTree = "<group>"; };
+		F30A84AC1D51B9C800B00B40 /* IWMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageViewController.m; sourceTree = "<group>"; };
+		F30A84B51D51BAE900B00B40 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2190913DD03E155805E2E7 /* libPods-TestOCWeiBo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F7637224BAE521D8738123E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				535FCB20937B5945E76A00C1 /* Pods-TestOCWeiBo.debug.xcconfig */,
+				8135EEEB9740D02E5725D6C7 /* Pods-TestOCWeiBo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		936388AC9CE89878D95AC9D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9320DA87FF26610F54F6C4CE /* libPods-TestOCWeiBo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F30A84581D519AD400B00B40 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +115,8 @@
 				F30A847D1D519AD400B00B40 /* TestOCWeiBoTests */,
 				F30A84881D519AD400B00B40 /* TestOCWeiBoUITests */,
 				F30A84621D519AD400B00B40 /* Products */,
+				4F7637224BAE521D8738123E /* Pods */,
+				936388AC9CE89878D95AC9D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +133,8 @@
 		F30A84631D519AD400B00B40 /* TestOCWeiBo */ = {
 			isa = PBXGroup;
 			children = (
-				F30A84671D519AD400B00B40 /* AppDelegate.h */,
-				F30A84681D519AD400B00B40 /* AppDelegate.m */,
-				F30A846A1D519AD400B00B40 /* ViewController.h */,
-				F30A846B1D519AD400B00B40 /* ViewController.m */,
-				F30A846D1D519AD400B00B40 /* Main.storyboard */,
-				F30A84701D519AD400B00B40 /* Assets.xcassets */,
-				F30A84721D519AD400B00B40 /* LaunchScreen.storyboard */,
-				F30A84751D519AD400B00B40 /* Info.plist */,
+				F30A84B31D51BA1700B00B40 /* Class */,
+				F30A84B41D51BA7000B00B40 /* Other */,
 				F30A84641D519AD400B00B40 /* Supporting Files */,
 			);
 			path = TestOCWeiBo;
@@ -140,6 +166,166 @@
 			path = TestOCWeiBoUITests;
 			sourceTree = "<group>";
 		};
+		F30A84971D51B9C800B00B40 /* Discover(广场) */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84981D51B9C800B00B40 /* Controller */,
+				F30A849B1D51B9C800B00B40 /* Model */,
+				F30A849C1D51B9C800B00B40 /* View */,
+			);
+			name = "Discover(广场)";
+			path = "../Discover(广场)";
+			sourceTree = "<group>";
+		};
+		F30A84981D51B9C800B00B40 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84991D51B9C800B00B40 /* IWDiscoverViewController.h */,
+				F30A849A1D51B9C800B00B40 /* IWDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F30A849B1D51B9C800B00B40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F30A849C1D51B9C800B00B40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F30A849D1D51B9C800B00B40 /* Me(我) */ = {
+			isa = PBXGroup;
+			children = (
+				F30A849E1D51B9C800B00B40 /* Controller */,
+				F30A84A11D51B9C800B00B40 /* Model */,
+				F30A84A21D51B9C800B00B40 /* View */,
+			);
+			name = "Me(我)";
+			path = "../Me(我)";
+			sourceTree = "<group>";
+		};
+		F30A849E1D51B9C800B00B40 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F30A849F1D51B9C800B00B40 /* IWMeViewController.h */,
+				F30A84A01D51B9C800B00B40 /* IWMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F30A84A11D51B9C800B00B40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F30A84A21D51B9C800B00B40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F30A84A31D51B9C800B00B40 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84A41D51B9C800B00B40 /* Controller */,
+				F30A84A71D51B9C800B00B40 /* Model */,
+				F30A84A81D51B9C800B00B40 /* View */,
+			);
+			name = "Home(首页)";
+			path = "../Home(首页)";
+			sourceTree = "<group>";
+		};
+		F30A84A41D51B9C800B00B40 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84A51D51B9C800B00B40 /* IWHomeViewController.h */,
+				F30A84A61D51B9C800B00B40 /* IWHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F30A84A71D51B9C800B00B40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F30A84A81D51B9C800B00B40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F30A84A91D51B9C800B00B40 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84AA1D51B9C800B00B40 /* Controller */,
+				F30A84AD1D51B9C800B00B40 /* Model */,
+				F30A84AE1D51B9C800B00B40 /* View */,
+			);
+			name = "Message(消息)";
+			path = "../Message(消息)";
+			sourceTree = "<group>";
+		};
+		F30A84AA1D51B9C800B00B40 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84AB1D51B9C800B00B40 /* IWMessageViewController.h */,
+				F30A84AC1D51B9C800B00B40 /* IWMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F30A84AD1D51B9C800B00B40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F30A84AE1D51B9C800B00B40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F30A84B31D51BA1700B00B40 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84971D51B9C800B00B40 /* Discover(广场) */,
+				F30A849D1D51B9C800B00B40 /* Me(我) */,
+				F30A84A31D51B9C800B00B40 /* Home(首页) */,
+				F30A84A91D51B9C800B00B40 /* Message(消息) */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		F30A84B41D51BA7000B00B40 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84671D519AD400B00B40 /* AppDelegate.h */,
+				F30A84681D519AD400B00B40 /* AppDelegate.m */,
+				F30A84701D519AD400B00B40 /* Assets.xcassets */,
+				F30A84721D519AD400B00B40 /* LaunchScreen.storyboard */,
+				F30A84751D519AD400B00B40 /* Info.plist */,
+				F30A84B51D51BAE900B00B40 /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +333,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F30A848E1D519AD400B00B40 /* Build configuration list for PBXNativeTarget "TestOCWeiBo" */;
 			buildPhases = (
+				306AD992CA2CEF9E7EF7C533 /* [CP] Check Pods Manifest.lock */,
 				F30A845D1D519AD400B00B40 /* Sources */,
 				F30A845E1D519AD400B00B40 /* Frameworks */,
 				F30A845F1D519AD400B00B40 /* Resources */,
+				AB819D30E8EE2DB1A12756C4 /* [CP] Embed Pods Frameworks */,
+				CF9CD93D932700AA8980F733 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,7 +434,6 @@
 			files = (
 				F30A84741D519AD400B00B40 /* LaunchScreen.storyboard in Resources */,
 				F30A84711D519AD400B00B40 /* Assets.xcassets in Resources */,
-				F30A846F1D519AD400B00B40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +453,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		306AD992CA2CEF9E7EF7C533 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB819D30E8EE2DB1A12756C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestOCWeiBo/Pods-TestOCWeiBo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF9CD93D932700AA8980F733 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestOCWeiBo/Pods-TestOCWeiBo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F30A845D1D519AD400B00B40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F30A846C1D519AD400B00B40 /* ViewController.m in Sources */,
+				F30A84B11D51B9C800B00B40 /* IWHomeViewController.m in Sources */,
 				F30A84691D519AD400B00B40 /* AppDelegate.m in Sources */,
 				F30A84661D519AD400B00B40 /* main.m in Sources */,
+				F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */,
+				F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */,
+				F30A84AF1D51B9C800B00B40 /* IWDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,20 +547,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F30A846D1D519AD400B00B40 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F30A846E1D519AD400B00B40 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F30A84721D519AD400B00B40 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F30A84731D519AD400B00B40 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -413,8 +645,10 @@
 		};
 		F30A848F1D519AD400B00B40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 535FCB20937B5945E76A00C1 /* Pods-TestOCWeiBo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "/Users/winbei/Desktop/测试1/TestOcWeiBo/TestOCWeiBo/TestOCWeiBo/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = TestOCWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = winbei.TestOCWeiBo;
@@ -424,8 +658,10 @@
 		};
 		F30A84901D519AD400B00B40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8135EEEB9740D02E5725D6C7 /* Pods-TestOCWeiBo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "/Users/winbei/Desktop/测试1/TestOcWeiBo/TestOCWeiBo/TestOCWeiBo/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = TestOCWeiBo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = winbei.TestOCWeiBo;
@@ -498,6 +734,7 @@
 				F30A84901D519AD400B00B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F30A84911D519AD400B00B40 /* Build configuration list for PBXNativeTarget "TestOCWeiBoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +743,7 @@
 				F30A84931D519AD400B00B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F30A84941D519AD400B00B40 /* Build configuration list for PBXNativeTarget "TestOCWeiBoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +752,7 @@
 				F30A84961D519AD400B00B40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
