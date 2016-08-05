@@ -11,7 +11,8 @@
 @protocol CustomTabbarDelegate <NSObject>
 
 @optional
-- (void)tabBar:(CustomTabbar *)tabBar didSelectedButtonFrom:(int)from to:(int)to;
+@optional
+- (void)tabBar:(CustomTabbar *)tabBar didSelectedButtonFrom:(NSInteger)from to:(NSInteger)to;
 @end
 
 @interface CustomTabbar : UIView
