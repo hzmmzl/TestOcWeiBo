@@ -7,6 +7,10 @@
 //
 
 #import "CustomTabBarButton.h"
+#import "CustomBadgeButton.h"
+@interface CustomTabBarButton()
+@property (nonatomic,strong) CustomBadgeButton *badgeButton;
+@end
 
 @implementation CustomTabBarButton
 
@@ -18,6 +22,11 @@
         [self setTitleColor:[UIColor orangeColor] forState:UIControlStateSelected];
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         self.titleLabel.font = kSystemSize(11);
+        
+        self.badgeButton = [[CustomBadgeButton alloc] init];
+        _badgeButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+        
+        [self addSubview:_badgeButton];
     }
     return self;
 }
@@ -36,8 +45,34 @@
 - (void)setItem:(UITabBarItem *)item
 {
     _item = item;
-    [self setImage:item.image forState:UIControlStateNormal];
-    [self setImage:item.selectedImage forState:UIControlStateSelected];
-    [self setTitle:item.title forState:UIControlStateNormal];
+    [item addObserver:self forKeyPath:@"badgeValue" options:0 context:nil];
+    [item addObserver:self forKeyPath:@"title" options:0 context:nil];
+    [item addObserver:self forKeyPath:@"image" options:0 context:nil];
+    [item addObserver:self forKeyPath:@"selectedImage" options:0 context:nil];
+    [self observeValueForKeyPath:nil ofObject:nil change:nil context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+{
+    [self setImage:_item.image forState:UIControlStateNormal];
+    [self setImage:_item.selectedImage forState:UIControlStateSelected];
+    [self setTitle:_item.title forState:UIControlStateNormal];
+    _badgeButton.badgeValue = _item.badgeValue;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    _badgeButton.x = self.width/2 + 10;
+    _badgeButton.y = 3;
+    
+}
+
+- (void)dealloc
+{
+    [self.item removeObserver:self forKeyPath:@"badgeValue"];
+    [self.item removeObserver:self forKeyPath:@"title"];
+    [self.item removeObserver:self forKeyPath:@"image"];
+    [self.item removeObserver:self forKeyPath:@"selectedImage"];
 }
 @end

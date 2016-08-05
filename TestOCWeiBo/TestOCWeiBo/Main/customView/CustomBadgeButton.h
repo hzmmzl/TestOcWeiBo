@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomBadgeButton : UIButton
-
+@property (nonatomic, copy) NSString *badgeValue;
 @end

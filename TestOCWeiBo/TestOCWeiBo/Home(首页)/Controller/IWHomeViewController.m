@@ -17,7 +17,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    UIButton *bu = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 40)];
+    [self.view addSubview:bu];
+    [bu addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchDown];
+    [bu setBackgroundColor:[UIColor redColor]];
+}
+
+- (void)buttonClick:(UIButton *)btn
+{
+    self.tabBarItem.badgeValue = @"4";
 }
 
 #pragma mark - Table view data source
