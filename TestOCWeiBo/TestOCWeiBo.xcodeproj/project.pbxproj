@@ -18,6 +18,10 @@
 		F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84A01D51B9C800B00B40 /* IWMeViewController.m */; };
 		F30A84B11D51B9C800B00B40 /* IWHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84A61D51B9C800B00B40 /* IWHomeViewController.m */; };
 		F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84AC1D51B9C800B00B40 /* IWMessageViewController.m */; };
+		F30A84BB1D51CA6800B00B40 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84BA1D51CA6800B00B40 /* MainTabBarViewController.m */; };
+		F30A84BE1D51E70F00B00B40 /* CustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84BD1D51E70F00B00B40 /* CustomTabbar.m */; };
+		F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84C01D51E9FC00B00B40 /* CustomTabBarButton.m */; };
+		F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,14 @@
 		F30A84AB1D51B9C800B00B40 /* IWMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMessageViewController.h; sourceTree = "<group>"; };
 		F30A84AC1D51B9C800B00B40 /* IWMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMessageViewController.m; sourceTree = "<group>"; };
 		F30A84B51D51BAE900B00B40 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F30A84B91D51CA6800B00B40 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		F30A84BA1D51CA6800B00B40 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		F30A84BC1D51E70F00B00B40 /* CustomTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabbar.h; sourceTree = "<group>"; };
+		F30A84BD1D51E70F00B00B40 /* CustomTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbar.m; sourceTree = "<group>"; };
+		F30A84BF1D51E9FC00B00B40 /* CustomTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarButton.h; sourceTree = "<group>"; };
+		F30A84C01D51E9FC00B00B40 /* CustomTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarButton.m; sourceTree = "<group>"; };
+		F30A84C21D51EA9D00B00B40 /* CustomBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadgeButton.h; sourceTree = "<group>"; };
+		F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadgeButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +317,7 @@
 		F30A84B31D51BA1700B00B40 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F30A84B61D51C97A00B00B40 /* Main */,
 				F30A84971D51B9C800B00B40 /* Discover(广场) */,
 				F30A849D1D51B9C800B00B40 /* Me(我) */,
 				F30A84A31D51B9C800B00B40 /* Home(首页) */,
@@ -324,6 +337,39 @@
 				F30A84B51D51BAE900B00B40 /* PrefixHeader.pch */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		F30A84B61D51C97A00B00B40 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84B81D51C9BB00B00B40 /* Class */,
+				F30A84B71D51C99800B00B40 /* CustomView */,
+			);
+			name = Main;
+			path = ../Main;
+			sourceTree = "<group>";
+		};
+		F30A84B71D51C99800B00B40 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84BC1D51E70F00B00B40 /* CustomTabbar.h */,
+				F30A84BD1D51E70F00B00B40 /* CustomTabbar.m */,
+				F30A84BF1D51E9FC00B00B40 /* CustomTabBarButton.h */,
+				F30A84C01D51E9FC00B00B40 /* CustomTabBarButton.m */,
+				F30A84C21D51EA9D00B00B40 /* CustomBadgeButton.h */,
+				F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */,
+			);
+			name = CustomView;
+			path = customView;
+			sourceTree = "<group>";
+		};
+		F30A84B81D51C9BB00B00B40 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				F30A84B91D51CA6800B00B40 /* MainTabBarViewController.h */,
+				F30A84BA1D51CA6800B00B40 /* MainTabBarViewController.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,11 +552,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F30A84BE1D51E70F00B00B40 /* CustomTabbar.m in Sources */,
+				F30A84BB1D51CA6800B00B40 /* MainTabBarViewController.m in Sources */,
 				F30A84B11D51B9C800B00B40 /* IWHomeViewController.m in Sources */,
 				F30A84691D519AD400B00B40 /* AppDelegate.m in Sources */,
+				F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */,
 				F30A84661D519AD400B00B40 /* main.m in Sources */,
 				F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */,
 				F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */,
+				F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */,
 				F30A84AF1D51B9C800B00B40 /* IWDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
