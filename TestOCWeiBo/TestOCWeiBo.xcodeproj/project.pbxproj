@@ -23,6 +23,14 @@
 		F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84C01D51E9FC00B00B40 /* CustomTabBarButton.m */; };
 		F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */; };
 		F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */; };
+		F3DA74E21D581DE30004F675 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E11D581DE30004F675 /* MainNavigationController.m */; };
+		F3DA74E51D5851AB0004F675 /* UIBarButtonItem+HeadName.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E41D5851AB0004F675 /* UIBarButtonItem+HeadName.m */; };
+		F3DA74E81D5857CA0004F675 /* PublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E71D5857CA0004F675 /* PublicMethod.m */; };
+		F3DA74EB1D5858660004F675 /* UILabel+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74EA1D5858660004F675 /* UILabel+Size.m */; };
+		F3DA74EE1D5864C10004F675 /* UIImage+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74ED1D5864C10004F675 /* UIImage+Size.m */; };
+		F3DA74F21D5873C40004F675 /* IWTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74F11D5873C40004F675 /* IWTitleButton.m */; };
+		F3DA74F91D587A7B0004F675 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3DA74F81D587A7B0004F675 /* TitleView.xib */; };
+		F3DA74FC1D587A940004F675 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74FB1D587A940004F675 /* TitleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +86,21 @@
 		F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadgeButton.m; sourceTree = "<group>"; };
 		F3BCA8E61D5469EB0040AE98 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		F3DA74E01D581DE30004F675 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		F3DA74E11D581DE30004F675 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		F3DA74E31D5851AB0004F675 /* UIBarButtonItem+HeadName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+HeadName.h"; path = "../../Main/customView/UIBarButtonItem+HeadName.h"; sourceTree = "<group>"; };
+		F3DA74E41D5851AB0004F675 /* UIBarButtonItem+HeadName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+HeadName.m"; path = "../../Main/customView/UIBarButtonItem+HeadName.m"; sourceTree = "<group>"; };
+		F3DA74E61D5857CA0004F675 /* PublicMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicMethod.h; sourceTree = "<group>"; };
+		F3DA74E71D5857CA0004F675 /* PublicMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicMethod.m; sourceTree = "<group>"; };
+		F3DA74E91D5858660004F675 /* UILabel+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Size.h"; sourceTree = "<group>"; };
+		F3DA74EA1D5858660004F675 /* UILabel+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Size.m"; sourceTree = "<group>"; };
+		F3DA74EC1D5864C10004F675 /* UIImage+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Size.h"; sourceTree = "<group>"; };
+		F3DA74ED1D5864C10004F675 /* UIImage+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Size.m"; sourceTree = "<group>"; };
+		F3DA74F01D5873C40004F675 /* IWTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWTitleButton.h; sourceTree = "<group>"; };
+		F3DA74F11D5873C40004F675 /* IWTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWTitleButton.m; sourceTree = "<group>"; };
+		F3DA74F81D587A7B0004F675 /* TitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
+		F3DA74FA1D587A940004F675 /* TitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
+		F3DA74FB1D587A940004F675 /* TitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +386,8 @@
 				F30A84C01D51E9FC00B00B40 /* CustomTabBarButton.m */,
 				F30A84C21D51EA9D00B00B40 /* CustomBadgeButton.h */,
 				F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */,
+				F3DA74E61D5857CA0004F675 /* PublicMethod.h */,
+				F3DA74E71D5857CA0004F675 /* PublicMethod.m */,
 			);
 			name = CustomView;
 			path = customView;
@@ -373,6 +398,8 @@
 			children = (
 				F30A84B91D51CA6800B00B40 /* MainTabBarViewController.h */,
 				F30A84BA1D51CA6800B00B40 /* MainTabBarViewController.m */,
+				F3DA74E01D581DE30004F675 /* MainNavigationController.h */,
+				F3DA74E11D581DE30004F675 /* MainNavigationController.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -387,6 +414,7 @@
 		F3BCA8E41D5468EC0040AE98 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				F3DA74EF1D5873B90004F675 /* view */,
 				F3BCA8E51D5469B90040AE98 /* Category */,
 			);
 			path = CustomView;
@@ -395,10 +423,28 @@
 		F3BCA8E51D5469B90040AE98 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F3DA74E31D5851AB0004F675 /* UIBarButtonItem+HeadName.h */,
+				F3DA74E41D5851AB0004F675 /* UIBarButtonItem+HeadName.m */,
 				F3BCA8E61D5469EB0040AE98 /* UIView+frame.h */,
 				F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */,
+				F3DA74E91D5858660004F675 /* UILabel+Size.h */,
+				F3DA74EA1D5858660004F675 /* UILabel+Size.m */,
+				F3DA74EC1D5864C10004F675 /* UIImage+Size.h */,
+				F3DA74ED1D5864C10004F675 /* UIImage+Size.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		F3DA74EF1D5873B90004F675 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F3DA74F01D5873C40004F675 /* IWTitleButton.h */,
+				F3DA74F11D5873C40004F675 /* IWTitleButton.m */,
+				F3DA74FA1D587A940004F675 /* TitleView.h */,
+				F3DA74FB1D587A940004F675 /* TitleView.m */,
+				F3DA74F81D587A7B0004F675 /* TitleView.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +555,7 @@
 			files = (
 				F30A84741D519AD400B00B40 /* LaunchScreen.storyboard in Resources */,
 				F30A84711D519AD400B00B40 /* Assets.xcassets in Resources */,
+				F3DA74F91D587A7B0004F675 /* TitleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,9 +628,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3DA74EE1D5864C10004F675 /* UIImage+Size.m in Sources */,
 				F30A84BE1D51E70F00B00B40 /* CustomTabbar.m in Sources */,
 				F30A84BB1D51CA6800B00B40 /* MainTabBarViewController.m in Sources */,
+				F3DA74EB1D5858660004F675 /* UILabel+Size.m in Sources */,
+				F3DA74F21D5873C40004F675 /* IWTitleButton.m in Sources */,
+				F3DA74E21D581DE30004F675 /* MainNavigationController.m in Sources */,
 				F30A84B11D51B9C800B00B40 /* IWHomeViewController.m in Sources */,
+				F3DA74FC1D587A940004F675 /* TitleView.m in Sources */,
+				F3DA74E51D5851AB0004F675 /* UIBarButtonItem+HeadName.m in Sources */,
+				F3DA74E81D5857CA0004F675 /* PublicMethod.m in Sources */,
 				F30A84691D519AD400B00B40 /* AppDelegate.m in Sources */,
 				F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */,
 				F30A84661D519AD400B00B40 /* main.m in Sources */,

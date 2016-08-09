@@ -21,7 +21,7 @@
         [self setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [self setTitleColor:[UIColor orangeColor] forState:UIControlStateSelected];
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.font = kSystemSize(11);
+        self.titleLabel.font = kSystemFontSize(11);
         
         self.badgeButton = [[CustomBadgeButton alloc] init];
         _badgeButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;

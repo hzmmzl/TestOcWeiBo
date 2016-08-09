@@ -7,6 +7,7 @@
 //
 
 #import "MainTabBarViewController.h"
+#import "MainNavigationController.h"
 #import "CustomTabbar.h"
 @interface MainTabBarViewController ()<CustomTabbarDelegate>
 @property (strong,nonatomic) CustomTabbar *customTabbar;
@@ -40,7 +41,7 @@
 }
 
 - (void)setupAllChildViewControllers{
-    NSArray *vcArray = @[@"IWHomeViewController",@"IWMessageViewController",@"IWDiscoverViewController",@"IWMessageViewController"];
+    NSArray *vcArray = @[@"IWHomeViewController",@"IWMessageViewController",@"IWDiscoverViewController",@"IWMeViewController"];
     NSArray *vcNormalImageArray = @[@"tabbar_home",@"tabbar_message_center",@"tabbar_discover",@"tabbar_profile"];
     NSArray *vcSelectedImageArray = @[@"tabbar_home_selected",@"tabbar_message_center_selected",@"tabbar_discover_selected",@"tabbar_profile_selected"];
     NSArray *vcTitleArray = @[@"首页",@"消息",@"广场",@"我"];
@@ -53,7 +54,7 @@
         vcController.tabBarItem.selectedImage = [UIImage imageNamed:vcSelectedImageArray[i]];
         vcController.tabBarItem.badgeValue = @"99+";
         [_customTabbar addTabBarButtonWithItem:vcController.tabBarItem];//tabbaritem
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcController];
+        MainNavigationController *nav = [[MainNavigationController alloc] initWithRootViewController:vcController];
         [self addChildViewController:nav];
     }
 }

@@ -16,7 +16,7 @@
         [self sizeToFit];
         self.enabled = NO;
         self.hidden = YES;
-        self.titleLabel.font = kSystemSize(10);
+        self.titleLabel.font = kSystemFontSize(10);
         CGRect frame = self.frame;
         frame.size.width = self.currentBackgroundImage.size.width;
         frame.size.height = self.currentBackgroundImage.size.height;
@@ -31,7 +31,7 @@
     CGRect frame = self.frame;
     frame.size.height = self.currentBackgroundImage.size.height;
     if (badgeValue && badgeValue.length >1) {
-      CGSize size = [badgeValue sizeWithAttributes:@{NSFontAttributeName:kSystemSize(10)}];
+      CGSize size = [badgeValue sizeWithAttributes:@{NSFontAttributeName:kSystemFontSize(10)}];
         frame.size.width = size.width + 6;
         self.frame = frame;
         self.hidden = NO;

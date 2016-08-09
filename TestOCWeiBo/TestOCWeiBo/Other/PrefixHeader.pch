@@ -19,7 +19,8 @@
 #define kColorWithRBG(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0]
 
 //字体
-#define kSystemSize(size) [UIFont systemFontOfSize:size]
+#define kSystemFontSize(size) [UIFont systemFontOfSize:size]
+#define kSystemBoldFontSize(size) [UIFont boldSystemFontOfSize:16]
 
 //版本
 #define iosVersion [[[UIDevice currentDevice] systemVersion] floatValue]
