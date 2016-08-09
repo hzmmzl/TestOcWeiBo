@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarViewController.h"
+#import "GuidePageViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,11 +18,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    MainTabBarViewController *mainTabVC = [[MainTabBarViewController alloc] init];
-    self.window.rootViewController = mainTabVC;
+//    MainTabBarViewController *mainTabVC = [[MainTabBarViewController alloc] init];
+//    self.window.rootViewController = mainTabVC;
+    [self switchRootViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+- (void)switchRootViewController
+{
+    NSString *key = @"CFBundleVersion";
+    // 上一次版本
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    // 当前版本
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
+    
+    
+    if ([currentVersion isEqualToString:lastVersion])
+    { //相同
+        self.window.rootViewController = [[MainTabBarViewController alloc] init];
+    } else { //不同
+        self.window.rootViewController = [[GuidePageViewController alloc] init];
+        
+        // 存入当前版本号
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

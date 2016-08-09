@@ -23,6 +23,7 @@
 		F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84C01D51E9FC00B00B40 /* CustomTabBarButton.m */; };
 		F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */; };
 		F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */; };
+		F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CBAE111D598041005D5A09 /* GuidePageViewController.m */; };
 		F3DA74E21D581DE30004F675 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E11D581DE30004F675 /* MainNavigationController.m */; };
 		F3DA74E51D5851AB0004F675 /* UIBarButtonItem+HeadName.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E41D5851AB0004F675 /* UIBarButtonItem+HeadName.m */; };
 		F3DA74E81D5857CA0004F675 /* PublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E71D5857CA0004F675 /* PublicMethod.m */; };
@@ -86,6 +87,8 @@
 		F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadgeButton.m; sourceTree = "<group>"; };
 		F3BCA8E61D5469EB0040AE98 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		F3CBAE101D598041005D5A09 /* GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageViewController.h; sourceTree = "<group>"; };
+		F3CBAE111D598041005D5A09 /* GuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageViewController.m; sourceTree = "<group>"; };
 		F3DA74E01D581DE30004F675 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		F3DA74E11D581DE30004F675 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		F3DA74E31D5851AB0004F675 /* UIBarButtonItem+HeadName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+HeadName.h"; path = "../../Main/customView/UIBarButtonItem+HeadName.h"; sourceTree = "<group>"; };
@@ -400,6 +403,8 @@
 				F30A84BA1D51CA6800B00B40 /* MainTabBarViewController.m */,
 				F3DA74E01D581DE30004F675 /* MainNavigationController.h */,
 				F3DA74E11D581DE30004F675 /* MainNavigationController.m */,
+				F3CBAE101D598041005D5A09 /* GuidePageViewController.h */,
+				F3CBAE111D598041005D5A09 /* GuidePageViewController.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */,
 				F30A84661D519AD400B00B40 /* main.m in Sources */,
 				F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */,
+				F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */,
 				F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */,
 				F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */,
 				F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */,
