@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "MainTabBarViewController.h"
 #import "GuidePageViewController.h"
+#import "OAuthViewController.h"
+#import "UserAccountInfo.h"
 @interface AppDelegate ()
 
 @end
@@ -18,13 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    MainTabBarViewController *mainTabVC = [[MainTabBarViewController alloc] init];
-//    self.window.rootViewController = mainTabVC;
-    [self switchRootViewController];
     [self.window makeKeyAndVisible];
+    
+    [self oauth2access_token];
+    
     return YES;
 }
 
+//版本
 - (void)switchRootViewController
 {
     NSString *key = @"CFBundleVersion";
@@ -43,6 +46,15 @@
         // 存入当前版本号
         [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
         [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+- (void)oauth2access_token
+{
+    if (UserAccountInfo.account) {
+        self.window.rootViewController = [[MainTabBarViewController alloc] init];
+    }else{
+        self.window.rootViewController = [[OAuthViewController alloc] init];
     }
 }
 

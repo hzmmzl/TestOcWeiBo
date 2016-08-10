@@ -26,6 +26,7 @@
 		F312E5831D59DF7A002F7A50 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F312E5811D59DF7A002F7A50 /* OAuthViewController.xib */; };
 		F3431D4F1D59D2FA000BFD7F /* UserAccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3431D4E1D59D2FA000BFD7F /* UserAccountInfo.m */; };
 		F3B224E91D5ABCC8002E6267 /* NSString+Str.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B224E81D5ABCC8002E6267 /* NSString+Str.m */; };
+		F3B224ED1D5AF5E9002E6267 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B224EC1D5AF5E9002E6267 /* NetWorkManager.m */; };
 		F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */; };
 		F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CBAE111D598041005D5A09 /* GuidePageViewController.m */; };
 		F3DA74E21D581DE30004F675 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E11D581DE30004F675 /* MainNavigationController.m */; };
@@ -96,6 +97,8 @@
 		F3431D4E1D59D2FA000BFD7F /* UserAccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountInfo.m; sourceTree = "<group>"; };
 		F3B224E71D5ABCC8002E6267 /* NSString+Str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Str.h"; sourceTree = "<group>"; };
 		F3B224E81D5ABCC8002E6267 /* NSString+Str.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Str.m"; sourceTree = "<group>"; };
+		F3B224EB1D5AF5E9002E6267 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		F3B224EC1D5AF5E9002E6267 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
 		F3BCA8E61D5469EB0040AE98 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		F3CBAE101D598041005D5A09 /* GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageViewController.h; sourceTree = "<group>"; };
@@ -385,6 +388,7 @@
 		F30A84B61D51C97A00B00B40 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F3B224EA1D5AF5B0002E6267 /* NetworkManager */,
 				F30A84B81D51C9BB00B00B40 /* Controller */,
 				F3431D4C1D59D207000BFD7F /* Model */,
 				F30A84B71D51C99800B00B40 /* CustomView */,
@@ -465,6 +469,15 @@
 				F3431D4E1D59D2FA000BFD7F /* UserAccountInfo.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F3B224EA1D5AF5B0002E6267 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F3B224EB1D5AF5E9002E6267 /* NetWorkManager.h */,
+				F3B224EC1D5AF5E9002E6267 /* NetWorkManager.m */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		F3BCA8E31D5468DB0040AE98 /* Lib */ = {
@@ -711,6 +724,7 @@
 				F30A84661D519AD400B00B40 /* main.m in Sources */,
 				F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */,
 				F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */,
+				F3B224ED1D5AF5E9002E6267 /* NetWorkManager.m in Sources */,
 				F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */,
 				F3431D4F1D59D2FA000BFD7F /* UserAccountInfo.m in Sources */,
 				F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */,

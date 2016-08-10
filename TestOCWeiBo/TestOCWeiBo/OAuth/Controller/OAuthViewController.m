@@ -9,7 +9,7 @@
 #import "OAuthViewController.h"
 #import "UserAccountInfo.h"
 #import "NSString+Str.h"
-#import "AFNetworking.h"
+#import "NetWorkManager.h"
 @interface OAuthViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *urlStr = @"https://api.weibo.com/oauth2/authorize?client_id=3014923605&redirect_uri=http://www.baidu.com";
+    NSString *urlStr = @"https://api.weibo.com/oauth2/authorize?client_id=3014923605&redirect_uri=https://www.baidu.com";
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_webView loadRequest:request];
@@ -33,7 +33,6 @@
     NSRange range = [tempStr rangeOfString:@"code="];
     
     if (range.location != NSNotFound && range.length) {
-       NSString *codeStr = [tempStr substringFromIndex:range.location];
         NSString *str = [[tempStr componentsSeparatedByString:@"code="] lastObject];
         [self getLoginTockenWithCode:str];
     }
@@ -45,6 +44,20 @@
 
 - (void)getLoginTockenWithCode:(NSString *)code
 {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NetWorkManager *manager = [NetWorkManager shareManager];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"client_id"] = @"3014923605";
+    params[@"client_secret"] = @"0bf699ee2dedda651559ae65c5c9ff59";
+    params[@"grant_type"] = @"authorization_code";
+    params[@"code"] = code;
+    params[@"redirect_uri"] = @"https://www.baidu.com";
+    [manager postRequestWithUrl:@"oauth2/access_token" Dic:params Progress:^(NSProgress *progress) {
+    } Success:^(NSURLSessionDataTask *task, id responseObject) {
+        UserAccountInfo *account = [UserAccountInfo accountWithDict:responseObject];
+        [UserAccountInfo saveAccount:account];
+    } Failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"error = %@",error);
+    }];
 }
+
 @end

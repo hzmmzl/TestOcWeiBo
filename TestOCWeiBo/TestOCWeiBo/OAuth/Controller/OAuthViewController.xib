@@ -13,12 +13,12 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="257" height="517"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHQ-zj-Arm">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <rect key="frame" x="0.0" y="0.0" width="257" height="517"/>
+                    <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="deviceRGB"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="igR-su-pza"/>
                     </connections>
@@ -31,6 +31,8 @@
                 <constraint firstItem="DHQ-zj-Arm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Q4P-6Z-YZb"/>
                 <constraint firstAttribute="bottom" secondItem="DHQ-zj-Arm" secondAttribute="bottom" id="SWQ-NE-vOP"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="142.5" y="257.5"/>
         </view>
     </objects>
 </document>
