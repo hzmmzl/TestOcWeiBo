@@ -8,6 +8,7 @@
 
 #ifdef __OBJC__
 #import "UIView+frame.h"
+#import "AFNetworking.h"
 //屏幕
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -33,6 +34,9 @@
 #else
 #define NSLog(...)
 #endif
+
+//沙盒地址
+#define NSSearchPath NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)
 
 //iphone、ipad各个型号
 #define iPhone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242,2208), [[UIScreen mainScreen] currentMode].size) : NO)

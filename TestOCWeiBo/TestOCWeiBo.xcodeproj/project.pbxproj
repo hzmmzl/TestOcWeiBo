@@ -22,6 +22,10 @@
 		F30A84BE1D51E70F00B00B40 /* CustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84BD1D51E70F00B00B40 /* CustomTabbar.m */; };
 		F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84C01D51E9FC00B00B40 /* CustomTabBarButton.m */; };
 		F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */; };
+		F312E5821D59DF7A002F7A50 /* OAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F312E5801D59DF7A002F7A50 /* OAuthViewController.m */; };
+		F312E5831D59DF7A002F7A50 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F312E5811D59DF7A002F7A50 /* OAuthViewController.xib */; };
+		F3431D4F1D59D2FA000BFD7F /* UserAccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F3431D4E1D59D2FA000BFD7F /* UserAccountInfo.m */; };
+		F3B224E91D5ABCC8002E6267 /* NSString+Str.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B224E81D5ABCC8002E6267 /* NSString+Str.m */; };
 		F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */; };
 		F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CBAE111D598041005D5A09 /* GuidePageViewController.m */; };
 		F3DA74E21D581DE30004F675 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E11D581DE30004F675 /* MainNavigationController.m */; };
@@ -85,6 +89,13 @@
 		F30A84C01D51E9FC00B00B40 /* CustomTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarButton.m; sourceTree = "<group>"; };
 		F30A84C21D51EA9D00B00B40 /* CustomBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadgeButton.h; sourceTree = "<group>"; };
 		F30A84C31D51EA9D00B00B40 /* CustomBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadgeButton.m; sourceTree = "<group>"; };
+		F312E57F1D59DF7A002F7A50 /* OAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthViewController.h; sourceTree = "<group>"; };
+		F312E5801D59DF7A002F7A50 /* OAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthViewController.m; sourceTree = "<group>"; };
+		F312E5811D59DF7A002F7A50 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		F3431D4D1D59D2FA000BFD7F /* UserAccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccountInfo.h; sourceTree = "<group>"; };
+		F3431D4E1D59D2FA000BFD7F /* UserAccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountInfo.m; sourceTree = "<group>"; };
+		F3B224E71D5ABCC8002E6267 /* NSString+Str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Str.h"; sourceTree = "<group>"; };
+		F3B224E81D5ABCC8002E6267 /* NSString+Str.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Str.m"; sourceTree = "<group>"; };
 		F3BCA8E61D5469EB0040AE98 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		F3CBAE101D598041005D5A09 /* GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageViewController.h; sourceTree = "<group>"; };
@@ -175,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				F30A84B31D51BA1700B00B40 /* Class */,
+				F312E57B1D59DED3002F7A50 /* OAuth */,
 				F30A84B41D51BA7000B00B40 /* Other */,
 				F3BCA8E31D5468DB0040AE98 /* Lib */,
 				F3BCA8E41D5468EC0040AE98 /* CustomView */,
@@ -373,7 +385,8 @@
 		F30A84B61D51C97A00B00B40 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				F30A84B81D51C9BB00B00B40 /* Class */,
+				F30A84B81D51C9BB00B00B40 /* Controller */,
+				F3431D4C1D59D207000BFD7F /* Model */,
 				F30A84B71D51C99800B00B40 /* CustomView */,
 			);
 			name = Main;
@@ -396,7 +409,7 @@
 			path = customView;
 			sourceTree = "<group>";
 		};
-		F30A84B81D51C9BB00B00B40 /* Class */ = {
+		F30A84B81D51C9BB00B00B40 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F30A84B91D51CA6800B00B40 /* MainTabBarViewController.h */,
@@ -406,7 +419,52 @@
 				F3CBAE101D598041005D5A09 /* GuidePageViewController.h */,
 				F3CBAE111D598041005D5A09 /* GuidePageViewController.m */,
 			);
+			name = Controller;
 			path = Class;
+			sourceTree = "<group>";
+		};
+		F312E57B1D59DED3002F7A50 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				F312E57C1D59DEF1002F7A50 /* Model */,
+				F312E57E1D59DF18002F7A50 /* View */,
+				F312E57D1D59DF04002F7A50 /* Controller */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		F312E57C1D59DEF1002F7A50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F312E57D1D59DF04002F7A50 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F312E57F1D59DF7A002F7A50 /* OAuthViewController.h */,
+				F312E5801D59DF7A002F7A50 /* OAuthViewController.m */,
+				F312E5811D59DF7A002F7A50 /* OAuthViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F312E57E1D59DF18002F7A50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = ../View;
+			sourceTree = "<group>";
+		};
+		F3431D4C1D59D207000BFD7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3431D4D1D59D2FA000BFD7F /* UserAccountInfo.h */,
+				F3431D4E1D59D2FA000BFD7F /* UserAccountInfo.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F3BCA8E31D5468DB0040AE98 /* Lib */ = {
@@ -436,6 +494,8 @@
 				F3DA74EA1D5858660004F675 /* UILabel+Size.m */,
 				F3DA74EC1D5864C10004F675 /* UIImage+Size.h */,
 				F3DA74ED1D5864C10004F675 /* UIImage+Size.m */,
+				F3B224E71D5ABCC8002E6267 /* NSString+Str.h */,
+				F3B224E81D5ABCC8002E6267 /* NSString+Str.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -558,6 +618,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F312E5831D59DF7A002F7A50 /* OAuthViewController.xib in Resources */,
 				F30A84741D519AD400B00B40 /* LaunchScreen.storyboard in Resources */,
 				F30A84711D519AD400B00B40 /* Assets.xcassets in Resources */,
 				F3DA74F91D587A7B0004F675 /* TitleView.xib in Resources */,
@@ -633,6 +694,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F312E5821D59DF7A002F7A50 /* OAuthViewController.m in Sources */,
 				F3DA74EE1D5864C10004F675 /* UIImage+Size.m in Sources */,
 				F30A84BE1D51E70F00B00B40 /* CustomTabbar.m in Sources */,
 				F30A84BB1D51CA6800B00B40 /* MainTabBarViewController.m in Sources */,
@@ -645,10 +707,12 @@
 				F3DA74E81D5857CA0004F675 /* PublicMethod.m in Sources */,
 				F30A84691D519AD400B00B40 /* AppDelegate.m in Sources */,
 				F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */,
+				F3B224E91D5ABCC8002E6267 /* NSString+Str.m in Sources */,
 				F30A84661D519AD400B00B40 /* main.m in Sources */,
 				F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */,
 				F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */,
 				F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */,
+				F3431D4F1D59D2FA000BFD7F /* UserAccountInfo.m in Sources */,
 				F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */,
 				F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */,
 				F30A84AF1D51B9C800B00B40 /* IWDiscoverViewController.m in Sources */,

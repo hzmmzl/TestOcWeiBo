@@ -1,9 +1,8 @@
 platform :ios, '8.0'
 
 target 'TestOCWeiBo' do
-  pod 'AFNetworking'
-  pod 'MJExtension'
-  pod 'SDWebImage'
-  pod 'MJRefresh'
-
+pod 'AFNetworking', '~> 3.0'
+pod 'MJExtension'
+pod 'SDWebImage'
+pod 'MBProgressHUD'
 end
