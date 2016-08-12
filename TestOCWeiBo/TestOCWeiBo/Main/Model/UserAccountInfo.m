@@ -22,6 +22,8 @@
     return self;
 }
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key{}
+
 /**
  *  从文件中解析对象的时候调
  */

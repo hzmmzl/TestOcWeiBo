@@ -19,6 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    self.tabBarItem.badgeValue = @"0";
     [self setupNavBarItems];//导航条上
 }
 
@@ -71,10 +72,6 @@
     NSLog(@"pop");
 }
 
-- (void)buttonClick:(UIButton *)btn
-{
-    self.tabBarItem.badgeValue = @"4";
-}
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

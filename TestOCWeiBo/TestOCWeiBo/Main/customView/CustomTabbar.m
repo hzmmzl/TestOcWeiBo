@@ -7,7 +7,7 @@
 //
 
 #import "CustomTabbar.h"
-#import "CustomBadgeButton.h"
+//#import "CustomBadgeButton.h"
 #import "CustomTabBarButton.h"
 @interface CustomTabbar()
 @property (nonatomic, strong) NSMutableArray *tabBarButtons;
@@ -60,6 +60,7 @@
     button.selected = YES;
     self.selectedButton = button;
     if (self.delegate && [self.delegate respondsToSelector:@selector(tabBar:didSelectedButtonFrom:to:)]) {
+        
         [self.delegate tabBar:self didSelectedButtonFrom:self.selectedButton.tag to:button.tag];
     }
 }

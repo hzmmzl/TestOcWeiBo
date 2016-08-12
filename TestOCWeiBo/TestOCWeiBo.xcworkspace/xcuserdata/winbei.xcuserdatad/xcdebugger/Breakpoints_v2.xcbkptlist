@@ -27,38 +27,6 @@
             endingLineNumber = "29"
             landmarkName = "-getRequestWithUrl:Progress:Success:Failure:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NetWorkManager getRequestWithUrl:Progress:Success:Failure:]"
-                  moduleName = "TestOCWeiBo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/winbei/Desktop/%E6%B5%8B%E8%AF%951/TestOcWeiBo/TestOCWeiBo/TestOCWeiBo/Main/NetworkManager/NetWorkManager.m"
-                  timestampString = "492515709.068061"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "297">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[NetWorkManager getRequestWithUrl:Progress:Success:Failure:]_block_invoke"
-                  moduleName = "TestOCWeiBo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/winbei/Desktop/%E6%B5%8B%E8%AF%951/TestOcWeiBo/TestOCWeiBo/TestOCWeiBo/Main/NetworkManager/NetWorkManager.m"
-                  timestampString = "492515709.068169"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

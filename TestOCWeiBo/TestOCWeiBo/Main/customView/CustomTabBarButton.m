@@ -25,7 +25,6 @@
         
         self.badgeButton = [[CustomBadgeButton alloc] init];
         _badgeButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-        
         [self addSubview:_badgeButton];
     }
     return self;

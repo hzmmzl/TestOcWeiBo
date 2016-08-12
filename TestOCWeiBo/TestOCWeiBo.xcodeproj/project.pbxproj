@@ -29,6 +29,10 @@
 		F3B224ED1D5AF5E9002E6267 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B224EC1D5AF5E9002E6267 /* NetWorkManager.m */; };
 		F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */; };
 		F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CBAE111D598041005D5A09 /* GuidePageViewController.m */; };
+		F3D3C9831D5C4F2000C489A1 /* BadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D3C9821D5C4F2000C489A1 /* BadgeButton.m */; };
+		F3D3C9851D5C4F3800C489A1 /* BadgeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3D3C9841D5C4F3800C489A1 /* BadgeButton.xib */; };
+		F3D3C98A1D5C64F900C489A1 /* TemppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D3C9881D5C64F900C489A1 /* TemppViewController.m */; };
+		F3D3C98B1D5C64F900C489A1 /* TemppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3D3C9891D5C64F900C489A1 /* TemppViewController.xib */; };
 		F3DA74E21D581DE30004F675 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E11D581DE30004F675 /* MainNavigationController.m */; };
 		F3DA74E51D5851AB0004F675 /* UIBarButtonItem+HeadName.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E41D5851AB0004F675 /* UIBarButtonItem+HeadName.m */; };
 		F3DA74E81D5857CA0004F675 /* PublicMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74E71D5857CA0004F675 /* PublicMethod.m */; };
@@ -103,6 +107,12 @@
 		F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		F3CBAE101D598041005D5A09 /* GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageViewController.h; sourceTree = "<group>"; };
 		F3CBAE111D598041005D5A09 /* GuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageViewController.m; sourceTree = "<group>"; };
+		F3D3C9811D5C4F2000C489A1 /* BadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeButton.h; sourceTree = "<group>"; };
+		F3D3C9821D5C4F2000C489A1 /* BadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeButton.m; sourceTree = "<group>"; };
+		F3D3C9841D5C4F3800C489A1 /* BadgeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BadgeButton.xib; sourceTree = "<group>"; };
+		F3D3C9871D5C64F900C489A1 /* TemppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemppViewController.h; sourceTree = "<group>"; };
+		F3D3C9881D5C64F900C489A1 /* TemppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemppViewController.m; sourceTree = "<group>"; };
+		F3D3C9891D5C64F900C489A1 /* TemppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemppViewController.xib; sourceTree = "<group>"; };
 		F3DA74E01D581DE30004F675 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		F3DA74E11D581DE30004F675 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		F3DA74E31D5851AB0004F675 /* UIBarButtonItem+HeadName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+HeadName.h"; path = "../../Main/customView/UIBarButtonItem+HeadName.h"; sourceTree = "<group>"; };
@@ -375,6 +385,7 @@
 		F30A84B41D51BA7000B00B40 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F3D3C9861D5C64E600C489A1 /* Temp */,
 				F30A84671D519AD400B00B40 /* AppDelegate.h */,
 				F30A84681D519AD400B00B40 /* AppDelegate.m */,
 				F30A84701D519AD400B00B40 /* Assets.xcassets */,
@@ -513,6 +524,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		F3D3C9861D5C64E600C489A1 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				F3D3C9871D5C64F900C489A1 /* TemppViewController.h */,
+				F3D3C9881D5C64F900C489A1 /* TemppViewController.m */,
+				F3D3C9891D5C64F900C489A1 /* TemppViewController.xib */,
+			);
+			path = Temp;
+			sourceTree = "<group>";
+		};
 		F3DA74EF1D5873B90004F675 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +542,9 @@
 				F3DA74FA1D587A940004F675 /* TitleView.h */,
 				F3DA74FB1D587A940004F675 /* TitleView.m */,
 				F3DA74F81D587A7B0004F675 /* TitleView.xib */,
+				F3D3C9811D5C4F2000C489A1 /* BadgeButton.h */,
+				F3D3C9821D5C4F2000C489A1 /* BadgeButton.m */,
+				F3D3C9841D5C4F3800C489A1 /* BadgeButton.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -635,6 +659,8 @@
 				F30A84741D519AD400B00B40 /* LaunchScreen.storyboard in Resources */,
 				F30A84711D519AD400B00B40 /* Assets.xcassets in Resources */,
 				F3DA74F91D587A7B0004F675 /* TitleView.xib in Resources */,
+				F3D3C9851D5C4F3800C489A1 /* BadgeButton.xib in Resources */,
+				F3D3C98B1D5C64F900C489A1 /* TemppViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +748,7 @@
 				F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */,
 				F3B224E91D5ABCC8002E6267 /* NSString+Str.m in Sources */,
 				F30A84661D519AD400B00B40 /* main.m in Sources */,
+				F3D3C98A1D5C64F900C489A1 /* TemppViewController.m in Sources */,
 				F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */,
 				F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */,
 				F3B224ED1D5AF5E9002E6267 /* NetWorkManager.m in Sources */,
@@ -730,6 +757,7 @@
 				F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */,
 				F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */,
 				F30A84AF1D51B9C800B00B40 /* IWDiscoverViewController.m in Sources */,
+				F3D3C9831D5C4F2000C489A1 /* BadgeButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

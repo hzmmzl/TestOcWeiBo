@@ -54,6 +54,7 @@
         vcController.tabBarItem.selectedImage = [UIImage imageNamed:vcSelectedImageArray[i]];
         vcController.tabBarItem.badgeValue = @"99+";
         [_customTabbar addTabBarButtonWithItem:vcController.tabBarItem];//tabbaritem
+//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vcController];
         MainNavigationController *nav = [[MainNavigationController alloc] initWithRootViewController:vcController];
         [self addChildViewController:nav];
     }
@@ -63,6 +64,7 @@
 #pragma mark CustomTabbarDelegate
 - (void)tabBar:(CustomTabbar *)tabBar didSelectedButtonFrom:(NSInteger)from to:(NSInteger)to
 {
+    UIViewController *vc = self.viewControllers[to];
     self.selectedIndex = to;
 }
 
