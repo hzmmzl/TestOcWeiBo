@@ -8,6 +8,7 @@
 
 #import "IWHomeViewController.h"
 #import "UIBarButtonItem+HeadName.h"
+#import "UserAccountInfo.h"
 #import "IWTitleButton.h"
 #import "TitleView.h"
 @interface IWHomeViewController ()
@@ -19,9 +20,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.tabBarItem.badgeValue = @"0";
     [self setupNavBarItems];//导航条上
+    [self setupUserStatus];
 }
+
+- (void)setupUserStatus
+{
+   NetWorkManager *manager = [NetWorkManager shareManager];
+    NSMutableDictionary *parametersDic = [NSMutableDictionary dictionary];
+    [parametersDic setObject:UserAccountInfo.account.access_token forKey:@"access_token"];
+    [manager getRequestWithUrl:@"statuses/home_timeline.json" Parameters:parametersDic Progress:^(NSProgress *progress) {
+    } Success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"status = %@",responseObject);
+        
+    } Failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"error%@",error);
+    }];
+}
+
 
 - (void)setupNavBarItems
 {

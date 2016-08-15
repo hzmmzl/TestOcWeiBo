@@ -22,11 +22,13 @@
     return manager;
 }
 
-- (void)getRequestWithUrl:(NSString *)url Progress:(progressBlock)progress Success:(successBlock)successBlock Failure:(failureBlock)failBlock
+- (void)getRequestWithUrl:(NSString *)url Parameters:(NSDictionary *)parameters Progress:(progressBlock)progress Success:(successBlock)successBlock Failure:(failureBlock)failBlock
 {
     AFHTTPSessionManager *manager  = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", @"text/json", nil];
     NSString *urlStr = [NSString stringWithFormat:@"%@%@",kHostName,url];
-    [manager GET:urlStr parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:urlStr parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
         progress(downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successBlock(task,responseObject);

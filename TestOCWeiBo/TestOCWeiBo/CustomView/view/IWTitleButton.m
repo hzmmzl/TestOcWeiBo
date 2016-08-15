@@ -27,7 +27,7 @@
         self.imageView.contentMode = UIViewContentModeCenter;
         self.titleLabel.textAlignment = NSTextAlignmentRight;
         // 背景
-        [self setBackgroundImage:[UIImage resizedImageWithName:@"navigationbar_filter_background_highlighted"] forState:UIControlStateHighlighted];
+        [self setBackgroundImage:[UIImage resizedImageWithName:@"navigationbar_filter_background_highlighted" EdgeInsets:UIEdgeInsetsMake(0.5, 0.5, 0.5, 0.5)] forState:UIControlStateHighlighted];
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
     return self;

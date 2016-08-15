@@ -9,10 +9,10 @@
 #import "UIImage+Size.h"
 
 @implementation UIImage (Size)
-+ (UIImage *)resizedImageWithName:(NSString *)name
++ (UIImage *)resizedImageWithName:(NSString *)name EdgeInsets:(UIEdgeInsets)edgeInsets
 {
     UIImage *image = [UIImage imageNamed:name];
-    [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
+    [image stretchableImageWithLeftCapWidth:image.size.width * edgeInsets.left topCapHeight:image.size.height * edgeInsets.top];
     return image;
 }
 @end
