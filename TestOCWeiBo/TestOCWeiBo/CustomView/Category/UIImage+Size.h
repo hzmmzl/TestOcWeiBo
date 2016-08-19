@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Size)
-+ (UIImage *)resizedImageWithName:(NSString *)name EdgeInsets:(UIEdgeInsets)edgeInsets;
++ (UIImage *)resizedImageWithName:(NSString *)name left:(CGFloat)left top:(CGFloat)top;
++(UIImage *)resizedImageWithName:(NSString *)name;
 @end

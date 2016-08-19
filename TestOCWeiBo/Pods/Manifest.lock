@@ -17,15 +17,22 @@ PODS:
   - Masonry (1.0.1)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
+  - MJPhotoBrowser (1.0.2):
+    - SDWebImage
+    - SVProgressHUD
+    - YLGIFImage
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - SVProgressHUD (2.0.3)
+  - YLGIFImage (0.11)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Masonry
   - MBProgressHUD
   - MJExtension
+  - MJPhotoBrowser
   - SDWebImage
 
 SPEC CHECKSUMS:
@@ -33,8 +40,11 @@ SPEC CHECKSUMS:
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJPhotoBrowser: f55e8490231f44a78ca6455105a1c798a142c95f
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 
-PODFILE CHECKSUM: 72d26b79720e2a92f2fbdb3c7c3404794834bfca
+PODFILE CHECKSUM: 869d90ec6dee1a7f869ab0fde4c9660d2100a09f
 
 COCOAPODS: 1.0.1

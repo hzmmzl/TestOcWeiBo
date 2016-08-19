@@ -7,12 +7,12 @@
 //
 
 #import "CustomBadgeButton.h"
-
+#import "UIImage+Size.h"
 @implementation CustomBadgeButton
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        [self setBackgroundImage:[UIImage imageNamed:@"main_badge"] forState:UIControlStateDisabled];
+        [self setBackgroundImage:[UIImage resizedImageWithName:@"main_badge"] forState:UIControlStateDisabled];
         [self sizeToFit];
         self.enabled = NO;
         self.hidden = YES;

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SratusesModel.h"
+#import "SratusesFrameModel.h"
 @interface HomeStatusTableViewCell : UITableViewCell
-
+@property (nonatomic , strong) SratusesFrameModel *frameModel;
++(HomeStatusTableViewCell *)cellWithTableView:(UITableView *)tableView;
 @end

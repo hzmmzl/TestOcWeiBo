@@ -2,25 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "navigationbar_filter_background_highlighted.png",
       "scale" : "1x"
     },
     {
-      "resizing" : {
-        "mode" : "9-part",
-        "center" : {
-          "mode" : "tile",
-          "width" : 1,
-          "height" : 1
-        },
-        "cap-insets" : {
-          "bottom" : 22,
-          "top" : 24,
-          "right" : 6,
-          "left" : 6
-        }
-      },
       "idiom" : "universal",
-      "filename" : "navigationbar_filter_background_highlighted_os7@2x.png",
+      "filename" : "navigationbar_filter_background_highlighted@2x.png",
       "scale" : "2x"
     },
     {

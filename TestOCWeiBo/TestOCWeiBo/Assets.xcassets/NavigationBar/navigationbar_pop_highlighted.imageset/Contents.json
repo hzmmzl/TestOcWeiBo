@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "navigationbar_pop_highlighted.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "navigationbar_pop_highlighted_os7@2x.png",
+      "filename" : "navigationbar_pop_highlighted@2x.png",
       "scale" : "2x"
     },
     {

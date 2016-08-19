@@ -9,6 +9,7 @@
 #ifdef __OBJC__
 #import "UIView+frame.h"
 #import "NetWorkManager.h"
+#import "UIImageView+WebCache.h"
 //屏幕
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height

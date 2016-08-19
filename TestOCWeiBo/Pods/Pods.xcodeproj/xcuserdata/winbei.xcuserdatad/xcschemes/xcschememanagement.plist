@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJPhotoBrowser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,10 +39,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YLGIFImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>12AD2AFBFCAA4CD807725E202BF76C85</key>
+		<key>4F33ACFACD5003F623F4471A9ABF3B7A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1670ACC56E8ECC813189EC782AF7F6F</key>
+		<key>A255E978169EAE5566F3A4F991270F16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6531936671216985768F25635056CE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D058B89EB3B3DF45457A2DCD3971AFFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDC12519E74CCF180C1A3F6DC7BA7734</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F18AD88971877C11A72E4656A766D73A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

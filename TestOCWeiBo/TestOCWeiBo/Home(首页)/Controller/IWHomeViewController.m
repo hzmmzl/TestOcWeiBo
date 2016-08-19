@@ -11,8 +11,13 @@
 #import "UserAccountInfo.h"
 #import "IWTitleButton.h"
 #import "TitleView.h"
+#import "SratusesFrameModel.h"
+#import "SratusesModel.h"
+#import "MJExtension.h"
+#import "HomeStatusTableViewCell.h"
 @interface IWHomeViewController ()
 @property (nonatomic,strong)TitleView *titleButton;
+@property (nonatomic , strong) NSMutableArray *statusFrameArray;
 @end
 
 @implementation IWHomeViewController
@@ -22,17 +27,25 @@
     [super viewDidLoad];
     [self setupNavBarItems];//导航条上
     [self setupUserStatus];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 - (void)setupUserStatus
 {
+    self.statusFrameArray = [NSMutableArray array];
    NetWorkManager *manager = [NetWorkManager shareManager];
     NSMutableDictionary *parametersDic = [NSMutableDictionary dictionary];
     [parametersDic setObject:UserAccountInfo.account.access_token forKey:@"access_token"];
     [manager getRequestWithUrl:@"statuses/home_timeline.json" Parameters:parametersDic Progress:^(NSProgress *progress) {
-    } Success:^(NSURLSessionDataTask *task, id responseObject) {
-//        NSLog(@"status = %@",responseObject);
+    } Success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+        NSArray *tempArr = [SratusesModel mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        for (SratusesModel *status in tempArr) {
+            SratusesFrameModel *frameModel = [[SratusesFrameModel alloc] init];
+            frameModel.sratusModel = status;
+            [_statusFrameArray addObject:frameModel];
+        }
         
+        [self.tableView reloadData];
     } Failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"error%@",error);
     }];
@@ -90,13 +103,27 @@
 
 
 #pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return _statusFrameArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HomeStatusTableViewCell *cell = [HomeStatusTableViewCell cellWithTableView:tableView];
+    cell.frameModel = _statusFrameArray[indexPath.row];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SratusesFrameModel *frameModel = _statusFrameArray[indexPath.row];
+    return frameModel.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 @end

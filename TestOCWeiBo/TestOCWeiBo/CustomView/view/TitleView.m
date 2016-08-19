@@ -19,7 +19,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        [self setBackgroundImage:[UIImage resizedImageWithName:@"navigationbar_filter_background_highlighted" EdgeInsets:UIEdgeInsetsMake(0.5, 0.5, 0.5, 0.5)] forState:UIControlStateHighlighted];
+        [self setBackgroundImage:[UIImage resizedImageWithName:@"navigationbar_filter_background_highlighted" left:0.5 top:0.5] forState:UIControlStateHighlighted];
         self.backgroundColor = [UIColor clearColor];
         
     }

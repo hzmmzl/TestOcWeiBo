@@ -29,6 +29,10 @@
 		F3B224ED1D5AF5E9002E6267 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B224EC1D5AF5E9002E6267 /* NetWorkManager.m */; };
 		F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */; };
 		F3BD2A341D5DC845000C39BD /* HomeStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BD2A321D5DC845000C39BD /* HomeStatusTableViewCell.m */; };
+		F3C7CE941D62EEC900DB6E02 /* IWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE931D62EEC900DB6E02 /* IWPhoto.m */; };
+		F3C7CE971D62F55000DB6E02 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE961D62F55000DB6E02 /* NSDate+MJ.m */; };
+		F3C7CE9A1D63034200DB6E02 /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE991D63034200DB6E02 /* PhotosView.m */; };
+		F3C7CE9D1D6303D200DB6E02 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE9C1D6303D200DB6E02 /* PhotoView.m */; };
 		F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CBAE111D598041005D5A09 /* GuidePageViewController.m */; };
 		F3D3C9831D5C4F2000C489A1 /* BadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D3C9821D5C4F2000C489A1 /* BadgeButton.m */; };
 		F3D3C9851D5C4F3800C489A1 /* BadgeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3D3C9841D5C4F3800C489A1 /* BadgeButton.xib */; };
@@ -42,6 +46,10 @@
 		F3DA74F21D5873C40004F675 /* IWTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74F11D5873C40004F675 /* IWTitleButton.m */; };
 		F3DA74F91D587A7B0004F675 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3DA74F81D587A7B0004F675 /* TitleView.xib */; };
 		F3DA74FC1D587A940004F675 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3DA74FB1D587A940004F675 /* TitleView.m */; };
+		F3EC6C481D61A9340040994E /* SratusesFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EC6C471D61A9340040994E /* SratusesFrameModel.m */; };
+		F3EC6C4B1D61B4A10040994E /* IWStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EC6C4A1D61B4A10040994E /* IWStatusToolbar.m */; };
+		F3EC6C4E1D61B56B0040994E /* StatusTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EC6C4D1D61B56B0040994E /* StatusTopView.m */; };
+		F3EC6C541D61C4090040994E /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EC6C531D61C4090040994E /* UserModel.m */; };
 		F3EFC2AD1D5DAFAE00FC9C96 /* SratusesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EFC2AC1D5DAFAE00FC9C96 /* SratusesModel.m */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +117,14 @@
 		F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		F3BD2A311D5DC845000C39BD /* HomeStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeStatusTableViewCell.h; sourceTree = "<group>"; };
 		F3BD2A321D5DC845000C39BD /* HomeStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeStatusTableViewCell.m; sourceTree = "<group>"; };
+		F3C7CE921D62EEC900DB6E02 /* IWPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWPhoto.h; sourceTree = "<group>"; };
+		F3C7CE931D62EEC900DB6E02 /* IWPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWPhoto.m; sourceTree = "<group>"; };
+		F3C7CE951D62F55000DB6E02 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
+		F3C7CE961D62F55000DB6E02 /* NSDate+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MJ.m"; sourceTree = "<group>"; };
+		F3C7CE981D63034200DB6E02 /* PhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosView.h; sourceTree = "<group>"; };
+		F3C7CE991D63034200DB6E02 /* PhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosView.m; sourceTree = "<group>"; };
+		F3C7CE9B1D6303D200DB6E02 /* PhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoView.h; sourceTree = "<group>"; };
+		F3C7CE9C1D6303D200DB6E02 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
 		F3CBAE101D598041005D5A09 /* GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageViewController.h; sourceTree = "<group>"; };
 		F3CBAE111D598041005D5A09 /* GuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageViewController.m; sourceTree = "<group>"; };
 		F3D3C9811D5C4F2000C489A1 /* BadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeButton.h; sourceTree = "<group>"; };
@@ -132,6 +148,14 @@
 		F3DA74F81D587A7B0004F675 /* TitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
 		F3DA74FA1D587A940004F675 /* TitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
 		F3DA74FB1D587A940004F675 /* TitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
+		F3EC6C461D61A9340040994E /* SratusesFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SratusesFrameModel.h; sourceTree = "<group>"; };
+		F3EC6C471D61A9340040994E /* SratusesFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SratusesFrameModel.m; sourceTree = "<group>"; };
+		F3EC6C491D61B4A10040994E /* IWStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWStatusToolbar.h; sourceTree = "<group>"; };
+		F3EC6C4A1D61B4A10040994E /* IWStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWStatusToolbar.m; sourceTree = "<group>"; };
+		F3EC6C4C1D61B56B0040994E /* StatusTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTopView.h; sourceTree = "<group>"; };
+		F3EC6C4D1D61B56B0040994E /* StatusTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTopView.m; sourceTree = "<group>"; };
+		F3EC6C521D61C4090040994E /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		F3EC6C531D61C4090040994E /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		F3EFC2AB1D5DAFAE00FC9C96 /* SratusesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SratusesModel.h; sourceTree = "<group>"; };
 		F3EFC2AC1D5DAFAE00FC9C96 /* SratusesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SratusesModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -333,6 +357,12 @@
 			children = (
 				F3EFC2AB1D5DAFAE00FC9C96 /* SratusesModel.h */,
 				F3EFC2AC1D5DAFAE00FC9C96 /* SratusesModel.m */,
+				F3EC6C461D61A9340040994E /* SratusesFrameModel.h */,
+				F3EC6C471D61A9340040994E /* SratusesFrameModel.m */,
+				F3EC6C521D61C4090040994E /* UserModel.h */,
+				F3EC6C531D61C4090040994E /* UserModel.m */,
+				F3C7CE921D62EEC900DB6E02 /* IWPhoto.h */,
+				F3C7CE931D62EEC900DB6E02 /* IWPhoto.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,8 +370,16 @@
 		F30A84A81D51B9C800B00B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3EC6C491D61B4A10040994E /* IWStatusToolbar.h */,
+				F3EC6C4A1D61B4A10040994E /* IWStatusToolbar.m */,
 				F3BD2A311D5DC845000C39BD /* HomeStatusTableViewCell.h */,
 				F3BD2A321D5DC845000C39BD /* HomeStatusTableViewCell.m */,
+				F3EC6C4C1D61B56B0040994E /* StatusTopView.h */,
+				F3EC6C4D1D61B56B0040994E /* StatusTopView.m */,
+				F3C7CE981D63034200DB6E02 /* PhotosView.h */,
+				F3C7CE991D63034200DB6E02 /* PhotosView.m */,
+				F3C7CE9B1D6303D200DB6E02 /* PhotoView.h */,
+				F3C7CE9C1D6303D200DB6E02 /* PhotoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -520,6 +558,8 @@
 		F3BCA8E51D5469B90040AE98 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F3C7CE951D62F55000DB6E02 /* NSDate+MJ.h */,
+				F3C7CE961D62F55000DB6E02 /* NSDate+MJ.m */,
 				F3DA74E31D5851AB0004F675 /* UIBarButtonItem+HeadName.h */,
 				F3DA74E41D5851AB0004F675 /* UIBarButtonItem+HeadName.m */,
 				F3BCA8E61D5469EB0040AE98 /* UIView+frame.h */,
@@ -753,19 +793,27 @@
 				F3DA74E21D581DE30004F675 /* MainNavigationController.m in Sources */,
 				F30A84B11D51B9C800B00B40 /* IWHomeViewController.m in Sources */,
 				F3DA74FC1D587A940004F675 /* TitleView.m in Sources */,
+				F3C7CE971D62F55000DB6E02 /* NSDate+MJ.m in Sources */,
 				F3DA74E51D5851AB0004F675 /* UIBarButtonItem+HeadName.m in Sources */,
 				F3DA74E81D5857CA0004F675 /* PublicMethod.m in Sources */,
 				F3EFC2AD1D5DAFAE00FC9C96 /* SratusesModel.m in Sources */,
 				F30A84691D519AD400B00B40 /* AppDelegate.m in Sources */,
+				F3C7CE941D62EEC900DB6E02 /* IWPhoto.m in Sources */,
+				F3C7CE9D1D6303D200DB6E02 /* PhotoView.m in Sources */,
 				F30A84C41D51EA9D00B00B40 /* CustomBadgeButton.m in Sources */,
 				F3B224E91D5ABCC8002E6267 /* NSString+Str.m in Sources */,
 				F30A84661D519AD400B00B40 /* main.m in Sources */,
+				F3EC6C481D61A9340040994E /* SratusesFrameModel.m in Sources */,
 				F3D3C98A1D5C64F900C489A1 /* TemppViewController.m in Sources */,
+				F3EC6C4B1D61B4A10040994E /* IWStatusToolbar.m in Sources */,
 				F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */,
 				F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */,
+				F3EC6C541D61C4090040994E /* UserModel.m in Sources */,
+				F3EC6C4E1D61B56B0040994E /* StatusTopView.m in Sources */,
 				F3B224ED1D5AF5E9002E6267 /* NetWorkManager.m in Sources */,
 				F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */,
 				F3431D4F1D59D2FA000BFD7F /* UserAccountInfo.m in Sources */,
+				F3C7CE9A1D63034200DB6E02 /* PhotosView.m in Sources */,
 				F30A84B01D51B9C800B00B40 /* IWMeViewController.m in Sources */,
 				F30A84C11D51E9FC00B00B40 /* CustomTabBarButton.m in Sources */,
 				F30A84AF1D51B9C800B00B40 /* IWDiscoverViewController.m in Sources */,
@@ -908,6 +956,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "/Users/winbei/Desktop/测试1/TestOcWeiBo/TestOCWeiBo/TestOCWeiBo/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = TestOCWeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = winbei.TestOCWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -921,6 +970,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "/Users/winbei/Desktop/测试1/TestOcWeiBo/TestOCWeiBo/TestOCWeiBo/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = TestOCWeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = winbei.TestOCWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
