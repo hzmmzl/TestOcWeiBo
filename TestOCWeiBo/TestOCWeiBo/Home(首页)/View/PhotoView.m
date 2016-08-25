@@ -26,9 +26,10 @@
 }
 
 
-- (void)setPhont:(IWPhoto *)photo
+- (void)setPhoto:(IWPhoto *)photo
 {
     _photo = photo;
+    NSLog(@"photoUrl = %@",photo.thumbnail_pic);
     self.gifView.hidden = ![photo.thumbnail_pic hasSuffix:@"gif"];
     [self sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
 }

@@ -74,6 +74,8 @@
     _titleButton.frame = CGRectMake(0, 0, size.width + _titleButton.titleViewImage.image.size.width + 10, 30);
     [_titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.titleView = _titleButton;
+    
+    self.tableView.backgroundColor = kColorWithRBGA(226, 226, 226,1);
 }
 
 - (void)titleClick:(TitleView *)button

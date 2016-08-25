@@ -27,7 +27,8 @@
     HomeStatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
         cell = [[HomeStatusTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.backgroundColor = [UIColor clearColor];
+        
     }
     return cell;
 }
@@ -35,8 +36,6 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-//        [self setUpUserMessage];
-//        [self setUpUserRetweetedStatus];
         self.topView = [[StatusTopView alloc] init];
         [self.contentView addSubview:_topView];
         [self setUpBottomMessage];

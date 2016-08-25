@@ -90,8 +90,7 @@
     if (status.pic_urls.count) {
         self.photosView.hidden = NO;
         self.photosView.frame = self.frameModel.photosViewF;
-//        self.photoView.photos = status.pic_urls;
-        [self addSubview:_photosView];
+        self.photosView.phonts = status.pic_urls;
     } else {
         self.photosView.hidden = YES;
     }
@@ -107,7 +106,15 @@
         self.retweetNameLabel.text = user.name;
         self.retweetContentLabel.frame = self.frameModel.retweetContentLabelF;
         self.retweetContentLabel.text = retweetStatus.text;
-        self.retweetPhotosView.frame = self.frameModel.retweetPhotosViewF;
+        
+        if (retweetStatus.pic_urls.count) {
+            self.retweetPhotosView.hidden = NO;
+            self.retweetPhotosView.phonts = retweetStatus.pic_urls;
+            self.retweetPhotosView.frame = self.frameModel.retweetPhotosViewF;
+        }else{
+            self.retweetPhotosView.hidden = YES;
+        }
+
         
     } else {
         self.retweetView.hidden = YES;
@@ -193,5 +200,6 @@
     [self.retweetView addSubview:retweetPhotosView];
     self.retweetPhotosView = retweetPhotosView;
 }
+
 
 @end
