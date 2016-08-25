@@ -9,8 +9,12 @@
 #import "IWMeViewController.h"
 #import "BadgeButton.h"
 #import "TemppViewController.h"
+#import "MyTableViewCell.h"
+#import "MyModel.h"
+#import "TempViewController.h"
 @interface IWMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic , strong) UITableView *tableView;
+@property (nonatomic , strong) NSMutableArray *dataArray;
 @end
 
 @implementation IWMeViewController
@@ -37,7 +41,19 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
+    self.dataArray = [NSMutableArray array];
+    for (int i=0; i<30; i++) {
+        MyModel *model = [[MyModel alloc] init];
+        if (i%2==0) {
+            model.isShow = YES;
+        }else{
+            model.isShow = NO;
+        }
+        [_dataArray addObject:model];
+    }
 }
+
+
 
 - (void)segmentedValueChanged:(UISegmentedControl *)segment
 {
@@ -53,39 +69,36 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return _dataArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellId = @"cellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        cell.backgroundColor = [UIColor brownColor];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"第%ld行",indexPath.row];
-//    if (indexPath.row % 2) {
-////        cell.imageView.hidden = NO;
-//        cell.imageView.image = [UIImage imageNamed:@"main_badge"];
-//    }else{
-////        cell.imageView.hidden = YES;
-//    }
+    MyTableViewCell *cell = [MyTableViewCell cellWithTableView:tableView];
+    cell.myModel = _dataArray[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//    if (cell.imageView.hidden == NO) {
-//        cell.imageView.hidden = YES;
-//        cell.imageView.image = [UIImage imageNamed:@"j;sd;gs"];
-//        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    }else{
-//        cell.imageView.hidden = YES;
-//    }
+    MyModel *model = _dataArray[indexPath.row];
+    model.isShow = !model.isShow;
+    NSArray *rowArr = @[indexPath];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [tableView reloadRowsAtIndexPaths:rowArr withRowAnimation:UITableViewRowAnimationFade];//刷新某一行
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        TempViewController *tempVc =  [[TempViewController alloc] init];
+        [self.navigationController pushViewController:tempVc animated:YES];
+    });
+    
+    
+    
+   
+    
     
 }
 

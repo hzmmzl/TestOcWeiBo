@@ -29,6 +29,10 @@
 		F3B224ED1D5AF5E9002E6267 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3B224EC1D5AF5E9002E6267 /* NetWorkManager.m */; };
 		F3BCA8E81D5469EB0040AE98 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */; };
 		F3BD2A341D5DC845000C39BD /* HomeStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BD2A321D5DC845000C39BD /* HomeStatusTableViewCell.m */; };
+		F3C7519E1D6ED3C1003CE3DD /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7519C1D6ED3C1003CE3DD /* MyTableViewCell.m */; };
+		F3C7519F1D6ED3C1003CE3DD /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C7519D1D6ED3C1003CE3DD /* MyTableViewCell.xib */; };
+		F3C751A21D6ED3D7003CE3DD /* MyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C751A11D6ED3D7003CE3DD /* MyModel.m */; };
+		F3C751A51D6ED85E003CE3DD /* TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C751A41D6ED85E003CE3DD /* TempViewController.m */; };
 		F3C7CE941D62EEC900DB6E02 /* IWPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE931D62EEC900DB6E02 /* IWPhoto.m */; };
 		F3C7CE971D62F55000DB6E02 /* NSDate+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE961D62F55000DB6E02 /* NSDate+MJ.m */; };
 		F3C7CE9A1D63034200DB6E02 /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE991D63034200DB6E02 /* PhotosView.m */; };
@@ -117,6 +121,13 @@
 		F3BCA8E71D5469EB0040AE98 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		F3BD2A311D5DC845000C39BD /* HomeStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeStatusTableViewCell.h; sourceTree = "<group>"; };
 		F3BD2A321D5DC845000C39BD /* HomeStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeStatusTableViewCell.m; sourceTree = "<group>"; };
+		F3C7519B1D6ED3C1003CE3DD /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		F3C7519C1D6ED3C1003CE3DD /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		F3C7519D1D6ED3C1003CE3DD /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		F3C751A01D6ED3D7003CE3DD /* MyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyModel.h; sourceTree = "<group>"; };
+		F3C751A11D6ED3D7003CE3DD /* MyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyModel.m; sourceTree = "<group>"; };
+		F3C751A31D6ED85E003CE3DD /* TempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempViewController.h; sourceTree = "<group>"; };
+		F3C751A41D6ED85E003CE3DD /* TempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempViewController.m; sourceTree = "<group>"; };
 		F3C7CE921D62EEC900DB6E02 /* IWPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWPhoto.h; sourceTree = "<group>"; };
 		F3C7CE931D62EEC900DB6E02 /* IWPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWPhoto.m; sourceTree = "<group>"; };
 		F3C7CE951D62F55000DB6E02 /* NSDate+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MJ.h"; sourceTree = "<group>"; };
@@ -314,6 +325,8 @@
 			children = (
 				F30A849F1D51B9C800B00B40 /* IWMeViewController.h */,
 				F30A84A01D51B9C800B00B40 /* IWMeViewController.m */,
+				F3C751A31D6ED85E003CE3DD /* TempViewController.h */,
+				F3C751A41D6ED85E003CE3DD /* TempViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,6 +334,8 @@
 		F30A84A11D51B9C800B00B40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3C751A01D6ED3D7003CE3DD /* MyModel.h */,
+				F3C751A11D6ED3D7003CE3DD /* MyModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -328,6 +343,9 @@
 		F30A84A21D51B9C800B00B40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3C7519B1D6ED3C1003CE3DD /* MyTableViewCell.h */,
+				F3C7519C1D6ED3C1003CE3DD /* MyTableViewCell.m */,
+				F3C7519D1D6ED3C1003CE3DD /* MyTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -710,6 +728,7 @@
 				F30A84711D519AD400B00B40 /* Assets.xcassets in Resources */,
 				F3DA74F91D587A7B0004F675 /* TitleView.xib in Resources */,
 				F3D3C9851D5C4F3800C489A1 /* BadgeButton.xib in Resources */,
+				F3C7519F1D6ED3C1003CE3DD /* MyTableViewCell.xib in Resources */,
 				F3D3C98B1D5C64F900C489A1 /* TemppViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,9 +802,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C751A21D6ED3D7003CE3DD /* MyModel.m in Sources */,
 				F312E5821D59DF7A002F7A50 /* OAuthViewController.m in Sources */,
 				F3DA74EE1D5864C10004F675 /* UIImage+Size.m in Sources */,
 				F30A84BE1D51E70F00B00B40 /* CustomTabbar.m in Sources */,
+				F3C751A51D6ED85E003CE3DD /* TempViewController.m in Sources */,
 				F30A84BB1D51CA6800B00B40 /* MainTabBarViewController.m in Sources */,
 				F3DA74EB1D5858660004F675 /* UILabel+Size.m in Sources */,
 				F3BD2A341D5DC845000C39BD /* HomeStatusTableViewCell.m in Sources */,
@@ -804,6 +825,7 @@
 				F3B224E91D5ABCC8002E6267 /* NSString+Str.m in Sources */,
 				F30A84661D519AD400B00B40 /* main.m in Sources */,
 				F3EC6C481D61A9340040994E /* SratusesFrameModel.m in Sources */,
+				F3C7519E1D6ED3C1003CE3DD /* MyTableViewCell.m in Sources */,
 				F3D3C98A1D5C64F900C489A1 /* TemppViewController.m in Sources */,
 				F3EC6C4B1D61B4A10040994E /* IWStatusToolbar.m in Sources */,
 				F30A84B21D51B9C800B00B40 /* IWMessageViewController.m in Sources */,
