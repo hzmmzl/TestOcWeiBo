@@ -36,48 +36,49 @@
     CGFloat widthSC = [UIScreen mainScreen].bounds.size.width - 3*IWPhotoMargin;
     NSLog(@"photoCount = %ld",phonts.count);
     NSInteger count = MIN(phonts.count, self.subviews.count);
-    for (NSInteger i=0; i<self.subviews.count; i++) {
+    for (int i = 0; i<self.subviews.count; i++) {
+        // 取出i位置对应的imageView
         PhotoView *photoView = self.subviews[i];
-        if (i<phonts.count) {
+        
+        // 判断这个imageView是否需要显示数据
+        if (i < phonts.count) {
+            // 显示图片
+            photoView.hidden = NO;
             
+            // 传递模型数据
             photoView.photo = phonts[i];
-            CGFloat photoX = IWPhotoMargin;
-            CGFloat photoY = IWPhotoMargin;
-            CGFloat photoW = IWPhotoW;
-            CGFloat photoH = IWPhotoH;
-            if (count == 1) {
-                photoW = IWPhotoW;
+            
+            // 设置子控件的frame
+            int maxColumns = (phonts.count == 4) ? 2 : 3;
+            //            if (phonts.count == 1) {
+            //                maxColumns = 1;
+            //            }
+            int col = i % maxColumns;
+            int row = i / maxColumns;
+            CGFloat photoX = col * (IWPhotoW + IWPhotoMargin);
+            CGFloat photoY = row * (IWPhotoH + IWPhotoMargin);
+            photoView.frame = CGRectMake(photoX, photoY, IWPhotoW, IWPhotoH);
+            if (phonts.count == 1) {
+                photoView.frame = CGRectMake(photoX, photoY, IWPhotoW, IWPhotoH);
+            }
+            
+            // Aspect : 按照图片的原来宽高比进行缩
+            // UIViewContentModeScaleAspectFit : 按照图片的原来宽高比进行缩放(一定要看到整张图片)
+            // UIViewContentModeScaleAspectFill :  按照图片的原来宽高比进行缩放(只能图片最中间的内容)
+            // UIViewContentModeScaleToFill : 直接拉伸图片至填充整个imageView
+            
+            if (phonts.count == 1) {
                 photoView.contentMode = UIViewContentModeScaleAspectFit;
                 photoView.clipsToBounds = NO;
-            }else if(count > 1 && count < 5)
-            {
-                self.maxColumns = 2;
-                int col = i % self.maxColumns; //0,1
-                int row = i / self.maxColumns; //0,0,1,1,2
+            } else {
                 photoView.contentMode = UIViewContentModeScaleAspectFill;
-                photoView.clipsToBounds = YES;
-                photoW = (widthSC - (self.maxColumns + 1)*IWPhotoMargin) / self.maxColumns;
-                photoX = col * (photoW + IWPhotoMargin);
-                photoY = row * (IWPhotoH + IWPhotoMargin);
-            }else if (count > 4)
-            {
-                self.maxColumns = 3;
-                int col = i % self.maxColumns; //0,1
-                int row = i / self.maxColumns; //0,0,1,1,2
-                photoView.contentMode = UIViewContentModeScaleAspectFill;
-                photoView.clipsToBounds = YES;
-                photoW = (widthSC - (self.maxColumns + 1)*IWPhotoMargin) / self.maxColumns;
-                photoX = col * (photoW + IWPhotoMargin);
-                photoY = row * (IWPhotoH + IWPhotoMargin);
                 photoView.clipsToBounds = YES;
             }
-            photoView.frame = CGRectMake(photoX, photoY, photoW, photoH);
-            NSLog(@"frame = %@",NSStringFromCGRect(photoView.frame));
-            photoView.hidden = NO;
-        }else{
+        } else { // 隐藏imageView
             photoView.hidden = YES;
         }
     }
+
 }
 /*
  
@@ -123,6 +124,52 @@
  photoView.hidden = YES;
  }
  }
+ 
+ 
+ 
+ for (NSInteger i=0; i<self.subviews.count; i++) {
+ PhotoView *photoView = self.subviews[i];
+ if (i<phonts.count) {
+ 
+ photoView.photo = phonts[i];
+ CGFloat photoX = IWPhotoMargin;
+ CGFloat photoY = IWPhotoMargin;
+ CGFloat photoW = IWPhotoW;
+ CGFloat photoH = IWPhotoH;
+ if (count == 1) {
+ photoW = IWPhotoW;
+ photoView.contentMode = UIViewContentModeScaleAspectFit;
+ photoView.clipsToBounds = NO;
+ }else if(count > 1 && count < 5)
+ {
+ self.maxColumns = 2;
+ int col = i % self.maxColumns; //0,1
+ int row = i / self.maxColumns; //0,0,1,1,2
+ photoView.contentMode = UIViewContentModeScaleAspectFill;
+ photoView.clipsToBounds = YES;
+ photoW = (widthSC - (self.maxColumns + 1)*IWPhotoMargin) / self.maxColumns;
+ photoX = col * (photoW + IWPhotoMargin);
+ photoY = row * (IWPhotoH + IWPhotoMargin);
+ }else if (count > 4)
+ {
+ self.maxColumns = 3;
+ int col = i % self.maxColumns; //0,1
+ int row = i / self.maxColumns; //0,0,1,1,2
+ photoView.contentMode = UIViewContentModeScaleAspectFill;
+ photoView.clipsToBounds = YES;
+ photoW = (widthSC - (self.maxColumns + 1)*IWPhotoMargin) / self.maxColumns;
+ photoX = col * (photoW + IWPhotoMargin);
+ photoY = row * (IWPhotoH + IWPhotoMargin);
+ photoView.clipsToBounds = YES;
+ }
+ photoView.frame = CGRectMake(photoX, photoY, photoW, photoH);
+ NSLog(@"frame = %@",NSStringFromCGRect(photoView.frame));
+ photoView.hidden = NO;
+ }else{
+ photoView.hidden = YES;
+ }
+ }
+
  */
 
 - (void)photoTap:(UIGestureRecognizer *)gestureRecognizer
@@ -132,14 +179,36 @@
 
 + (CGSize)photosViewSizeWithPhotosCount:(NSInteger)count
 {
-    if(count <= 3){
-        return CGSizeMake(IWPhotoW*count, IWPhotoH);
-    }else if (count >= 4 && count <= 6){
-        return CGSizeMake(IWPhotoW*2, IWPhotoH*2);
-    }else if (count >= 7 && count <= 9){
-        return CGSizeMake(IWPhotoW*3, IWPhotoH*3);
-    }
-    return CGSizeZero;
+//    if(count <= 3){
+//        return CGSizeMake(IWPhotoW*count, IWPhotoH);
+//    }else if (count >= 4 && count <= 6){
+//        return CGSizeMake(IWPhotoW*2, IWPhotoH*2);
+//    }else if (count >= 7 && count <= 9){
+//        return CGSizeMake(IWPhotoW*3+IWPhotoMargin, IWPhotoH*3+IWPhotoMargin);
+//    }
+//    return CGSizeZero;
+    
+    // 一行最多有3列
+    int maxColumns = (count == 4) ? 2 : 3;
+    
+    //  总行数
+    int rows = (count + maxColumns - 1) / maxColumns;
+    // 高度
+    CGFloat photosH = rows * IWPhotoH + (rows - 1) * IWPhotoMargin;
+    
+    // 总列数
+    int cols = (count >= maxColumns) ? maxColumns : count;
+    // 宽度
+    CGFloat photosW = cols * IWPhotoW + (cols - 1) * IWPhotoMargin;
+    
+    return CGSizeMake(photosW, photosH);
+    /**
+     一共60条数据 == count
+     一页10条 == size
+     总页数 == pages
+     pages = (count + size - 1)/size;
+     */
+
 }
 
 @end
