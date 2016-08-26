@@ -15,9 +15,11 @@
 #import "SratusesModel.h"
 #import "MJExtension.h"
 #import "HomeStatusTableViewCell.h"
+#import "UIImage+Size.h"
 @interface IWHomeViewController ()
 @property (nonatomic,strong)TitleView *titleButton;
 @property (nonatomic , strong) NSMutableArray *statusFrameArray;
+@property (nonatomic , strong) UIButton *statusButton;
 @end
 
 @implementation IWHomeViewController
@@ -28,6 +30,31 @@
     [self setupNavBarItems];//导航条上
     [self setupUserStatus];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+}
+
+- (void)showNewStatusCount:(int)count
+{
+    if (!_statusButton) {
+        self.statusButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 24, kScreenWidth, 40)];
+        [self.navigationController.view insertSubview:_statusButton belowSubview:self.navigationController.navigationBar];
+        [_statusButton setBackgroundImage:[UIImage resizedImageWithName:@"timeline_new_status_background"] forState:UIControlStateNormal];
+        _statusButton.titleLabel.font = kSystemFontSize(14);
+        [_statusButton setTitleColor:[UIColor orangeColor] forState:UIControlStateDisabled];
+        
+        _statusButton.enabled = NO;
+    }
+    self.statusButton.hidden = NO;
+    [self.statusButton setTitle:[NSString stringWithFormat:@"你有%d条新消息哦~",count] forState:UIControlStateDisabled];
+    [UIView animateWithDuration:0.7 animations:^{
+        self.statusButton.transform = CGAffineTransformMakeTranslation(0, 42);
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.7 delay:1 options:UIViewAnimationOptionCurveLinear animations:^{
+            self.statusButton.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            self.statusButton.hidden = YES;
+        }];
+    }];
 }
 
 - (void)setupUserStatus
@@ -39,6 +66,7 @@
     [manager getRequestWithUrl:@"statuses/home_timeline.json" Parameters:parametersDic Progress:^(NSProgress *progress) {
     } Success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSArray *tempArr = [SratusesModel mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        [self showNewStatusCount:tempArr.count];
         for (SratusesModel *status in tempArr) {
             SratusesFrameModel *frameModel = [[SratusesFrameModel alloc] init];
             frameModel.sratusModel = status;

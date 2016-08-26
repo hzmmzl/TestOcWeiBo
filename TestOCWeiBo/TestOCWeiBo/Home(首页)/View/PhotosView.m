@@ -8,6 +8,8 @@
 
 #import "PhotosView.h"
 #import "PhotoView.h"
+#import "MJPhotoBrowser.h"
+#import "IWPhoto.h"
 #define IWPhotoW 70
 #define IWPhotoH 70
 #define IWPhotoMargin 10
@@ -21,11 +23,10 @@
     if (self = [super initWithFrame:frame]) {
         for (NSInteger i=0; i<9; i++) {
             PhotoView *photoView = [[PhotoView alloc] init];
+//            photoView.userInteractionEnabled = YES;
             photoView.tag = i;
-            photoView.userInteractionEnabled = YES;
-            [photoView addGestureRecognizer:[[UIGestureRecognizer alloc] initWithTarget:self action:@selector(photoTap:)]];
+//            [photoView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTap:)]];
             [self addSubview:photoView];
-            photoView.hidden = YES;
         }
     }
     return self;
@@ -175,6 +176,29 @@
 - (void)photoTap:(UIGestureRecognizer *)gestureRecognizer
 {
     NSLog(@"%ld",gestureRecognizer.view.tag);
+    int count = self.phonts.count;
+    
+    // 1.封装图片数据
+    NSMutableArray *myphotos = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i<count; i++) {
+        // 一个MJPhoto对应一张显示的图片
+        MJPhoto *mjphoto = [[MJPhoto alloc] init];
+        
+        mjphoto.srcImageView = self.subviews[i]; // 来源于哪个UIImageView
+        
+        IWPhoto *iwphoto = self.phonts[i];
+        NSString *photoUrl = [iwphoto.thumbnail_pic stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+        mjphoto.url = [NSURL URLWithString:photoUrl]; // 图片路径
+        
+        [myphotos addObject:mjphoto];
+    }
+    
+    // 2.显示相册
+    MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
+    browser.currentPhotoIndex = gestureRecognizer.view.tag; // 弹出相册时显示的第一张图片是？
+    browser.photos = myphotos; // 设置所有的图片
+    [browser show];
+
 }
 
 + (CGSize)photosViewSizeWithPhotosCount:(NSInteger)count

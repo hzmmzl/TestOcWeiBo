@@ -19,13 +19,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestOCWeiBo/Me(&#x6211;)/Controller/IWMeViewController.m"
-            timestampString = "493804628.757716"
+            filePath = "TestOCWeiBo/Home(&#x9996;&#x9875;)/View/PhotosView.m"
+            timestampString = "493806842.164741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-photoTap:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestOCWeiBo/Home(&#x9996;&#x9875;)/View/StatusTopView.m"
+            timestampString = "493808015.985812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-hhhhhhhh"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

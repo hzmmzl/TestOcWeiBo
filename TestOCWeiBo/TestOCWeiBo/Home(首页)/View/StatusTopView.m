@@ -46,6 +46,7 @@
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        self.userInteractionEnabled = YES;
         [self setUpUserMessage];
         [self setUpUserRetweetedStatus];
     }
@@ -128,8 +129,11 @@
     UIImageView *topView = [[UIImageView alloc] init];
     topView.image = [UIImage imageNamed:@"timeline_card_top_background"];
     topView.highlightedImage = [UIImage imageNamed:@"timeline_card_top_background_highlighted"];
-//    topView.contentMode = UIViewContentModeCenter;
+    topView.userInteractionEnabled = YES;
     self.topView = topView;
+    _topView.userInteractionEnabled = YES;
+    UIGestureRecognizer *gest = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(hhhhhhhh)];
+    [_topView addGestureRecognizer:gest];
     [self addSubview:self.topView];
     /** 头像 */
     UIImageView *iconView = [[UIImageView alloc] init];
@@ -148,6 +152,7 @@
     /** 配图 */
     PhotosView *photoView = [[PhotosView alloc] init];
     self.photosView = photoView;
+    self.photosView.userInteractionEnabled = YES;
     [self addSubview:self.photosView];
     /** 时间 */
     UILabel *timeLabel = [[UILabel alloc] init];
@@ -174,8 +179,10 @@
     /** 1.被转发微博的view(父控件) */
     UIImageView *retweetView = [[UIImageView alloc] init];
     retweetView.image = [UIImage resizedImageWithName:@"timeline_retweet_background" left:0.9 top:0.5];
+    retweetView.userInteractionEnabled = YES;
     [self.topView addSubview:retweetView];
     self.retweetView = retweetView;
+    _retweetView.userInteractionEnabled = YES;
     
     
     /** 2.被转发微博作者的昵称 */
@@ -197,9 +204,15 @@
     
     /** 4.被转发微博的配图 */
     PhotosView *retweetPhotosView = [[PhotosView alloc] init];
+    retweetPhotosView.userInteractionEnabled = YES;
     [self.retweetView addSubview:retweetPhotosView];
     self.retweetPhotosView = retweetPhotosView;
+    self.retweetPhotosView.userInteractionEnabled = YES;
 }
 
+- (void)hhhhhhhh
+{
+    NSLog(@"-----");
+}
 
 @end

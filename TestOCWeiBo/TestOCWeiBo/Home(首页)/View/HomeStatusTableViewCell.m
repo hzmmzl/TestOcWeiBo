@@ -37,6 +37,7 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.topView = [[StatusTopView alloc] init];
+        _topView.userInteractionEnabled = YES;
         [self.contentView addSubview:_topView];
         [self setUpBottomMessage];
     }

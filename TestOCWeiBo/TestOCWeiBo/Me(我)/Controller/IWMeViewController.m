@@ -86,28 +86,12 @@
     MyModel *model = _dataArray[indexPath.row];
     model.isShow = !model.isShow;
     NSArray *rowArr = @[indexPath];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [tableView reloadRowsAtIndexPaths:rowArr withRowAnimation:UITableViewRowAnimationFade];//刷新某一行
-    });
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        TempViewController *tempVc =  [[TempViewController alloc] init];
-        [self.navigationController pushViewController:tempVc animated:YES];
-    });
-    
-    
-    
-   
-    
+    [tableView reloadRowsAtIndexPaths:rowArr withRowAnimation:UITableViewRowAnimationFade];//刷新某一行
+    TempViewController *tempVc =  [[TempViewController alloc] init];
+    [self.navigationController pushViewController:tempVc animated:YES];
     
 }
-
-
-//- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return UITableViewCellEditingStyleDelete;
-//    //| UITableViewCellEditingStyleInsert;
-//}
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
