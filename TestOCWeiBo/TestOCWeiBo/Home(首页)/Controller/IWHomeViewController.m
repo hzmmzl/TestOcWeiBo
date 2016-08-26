@@ -16,6 +16,8 @@
 #import "MJExtension.h"
 #import "HomeStatusTableViewCell.h"
 #import "UIImage+Size.h"
+#import "UserModel.h"
+#import "MJRefresh.h"
 @interface IWHomeViewController ()
 @property (nonatomic,strong)TitleView *titleButton;
 @property (nonatomic , strong) NSMutableArray *statusFrameArray;
@@ -31,6 +33,13 @@
     [self setupUserStatus];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    //刷新
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)showNewStatusCount:(int)count
@@ -63,10 +72,11 @@
    NetWorkManager *manager = [NetWorkManager shareManager];
     NSMutableDictionary *parametersDic = [NSMutableDictionary dictionary];
     [parametersDic setObject:UserAccountInfo.account.access_token forKey:@"access_token"];
+    [parametersDic setObject:@10 forKey:@"count"];
     [manager getRequestWithUrl:@"statuses/home_timeline.json" Parameters:parametersDic Progress:^(NSProgress *progress) {
     } Success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
         NSArray *tempArr = [SratusesModel mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
-        [self showNewStatusCount:tempArr.count];
+        [self showNewStatusCount:(int)tempArr.count];
         for (SratusesModel *status in tempArr) {
             SratusesFrameModel *frameModel = [[SratusesFrameModel alloc] init];
             frameModel.sratusModel = status;
@@ -76,6 +86,29 @@
         [self.tableView reloadData];
     } Failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"error%@",error);
+    }];
+}
+
+/**
+ *  获得用户信息
+ */
+- (void)setupUserData
+{
+    // 1.创建请求管理对象
+    NetWorkManager *mgr = [NetWorkManager shareManager];
+    
+    // 2.封装请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"access_token"] = [UserAccountInfo account].access_token;
+    params[@"uid"] = @([UserAccountInfo account].uid);
+    
+    // 3.发送请求
+    [mgr getRequestWithUrl:@"https://api.weibo.com/2/users/show.json" Parameters:params Progress:^(NSProgress *progress) {
+    } Success:^(NSURLSessionDataTask *task, NSDictionary *responseObject) {
+//        UserModel *userModel = [UserModel userInfoWithDic:responseObject];
+//        _titleButton.titleViewTitle.text = userModel.name;
+    } Failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
     }];
 }
 
@@ -92,10 +125,9 @@
     //    titleButton.frame = CGRectMake(0, 0, 100, 40);
     //    [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
     //    self.navigationItem.titleView = titleButton;
-    
+    _titleButton.titleViewTitle.text = @"啊哈哈哈";
     //标题按钮
     self.titleButton = [TitleView titleView];
-    _titleButton.titleViewTitle.text = @"啊哈哈哈";
     _titleButton.titleViewTitle.font = kSystemBoldFontSize(16);
     
     CGSize size = [_titleButton.titleViewTitle.text boundingRectWithSize:CGSizeMake(300, 40) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:kSystemBoldFontSize(16)} context:nil].size;

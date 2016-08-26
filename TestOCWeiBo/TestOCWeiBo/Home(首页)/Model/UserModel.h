@@ -29,4 +29,5 @@
  *  会员类型
  */
 @property (nonatomic, assign) int mbtype;
++(UserModel *)userInfoWithDic:(NSDictionary *)dic;
 @end
