@@ -18,6 +18,7 @@
 #import "UIImage+Size.h"
 #import "UserModel.h"
 #import "MJRefresh.h"
+#import "AFNetworking.h"
 @interface IWHomeViewController ()
 @property (nonatomic,strong)TitleView *titleButton;
 @property (nonatomic , strong) NSMutableArray *statusFrameArray;
@@ -34,12 +35,19 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     //刷新
+    [self setupRefreshView];
     
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+}
+
+//刷新
+- (void)setupRefreshView
+{
+    
 }
 
 - (void)showNewStatusCount:(int)count

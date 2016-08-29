@@ -38,6 +38,7 @@
 		F3C7CE9A1D63034200DB6E02 /* PhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE991D63034200DB6E02 /* PhotosView.m */; };
 		F3C7CE9D1D6303D200DB6E02 /* PhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7CE9C1D6303D200DB6E02 /* PhotoView.m */; };
 		F3CBAE121D598041005D5A09 /* GuidePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CBAE111D598041005D5A09 /* GuidePageViewController.m */; };
+		F3CC6B351D73DF91005F4A00 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F3CC6B341D73DF91005F4A00 /* HttpTool.m */; };
 		F3D3C9831D5C4F2000C489A1 /* BadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D3C9821D5C4F2000C489A1 /* BadgeButton.m */; };
 		F3D3C9851D5C4F3800C489A1 /* BadgeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3D3C9841D5C4F3800C489A1 /* BadgeButton.xib */; };
 		F3D3C98A1D5C64F900C489A1 /* TemppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D3C9881D5C64F900C489A1 /* TemppViewController.m */; };
@@ -138,6 +139,8 @@
 		F3C7CE9C1D6303D200DB6E02 /* PhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoView.m; sourceTree = "<group>"; };
 		F3CBAE101D598041005D5A09 /* GuidePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageViewController.h; sourceTree = "<group>"; };
 		F3CBAE111D598041005D5A09 /* GuidePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageViewController.m; sourceTree = "<group>"; };
+		F3CC6B331D73DF91005F4A00 /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		F3CC6B341D73DF91005F4A00 /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		F3D3C9811D5C4F2000C489A1 /* BadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeButton.h; sourceTree = "<group>"; };
 		F3D3C9821D5C4F2000C489A1 /* BadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeButton.m; sourceTree = "<group>"; };
 		F3D3C9841D5C4F3800C489A1 /* BadgeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BadgeButton.xib; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 			children = (
 				F3B224EB1D5AF5E9002E6267 /* NetWorkManager.h */,
 				F3B224EC1D5AF5E9002E6267 /* NetWorkManager.m */,
+				F3CC6B331D73DF91005F4A00 /* HttpTool.h */,
+				F3CC6B341D73DF91005F4A00 /* HttpTool.m */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -807,6 +812,7 @@
 				F3DA74EE1D5864C10004F675 /* UIImage+Size.m in Sources */,
 				F30A84BE1D51E70F00B00B40 /* CustomTabbar.m in Sources */,
 				F3C751A51D6ED85E003CE3DD /* TempViewController.m in Sources */,
+				F3CC6B351D73DF91005F4A00 /* HttpTool.m in Sources */,
 				F30A84BB1D51CA6800B00B40 /* MainTabBarViewController.m in Sources */,
 				F3DA74EB1D5858660004F675 /* UILabel+Size.m in Sources */,
 				F3BD2A341D5DC845000C39BD /* HomeStatusTableViewCell.m in Sources */,
